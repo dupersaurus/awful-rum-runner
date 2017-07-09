@@ -15,11 +15,11 @@ namespace UI {
 			
 		}
 
-		public void Show() {
+		protected void Show() {
 			gameObject.SetActive(true);
 		}
 
-		public void Hide() {
+		public virtual void Hide() {
 			gameObject.SetActive(false);
 		}
 	}

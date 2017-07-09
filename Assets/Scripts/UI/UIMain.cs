@@ -4,17 +4,19 @@ using UnityEngine;
 
 namespace UI {
 	public class UIMain : MonoBehaviour {
+		private static UIMain _instance;
 
 		private Page _activePage = null;
 
-		public bool hasFocus {
-			get { return _activePage != null; }
+		public static bool hasFocus {
+			get { return _instance._activePage != null; }
 		}
 
 		private WarehouseUI _warehouse;
 
 		// Use this for initialization
 		void Awake () {
+			_instance = this;
 			_warehouse = GetComponentInChildren<WarehouseUI>();
 		}
 		
@@ -29,6 +31,10 @@ namespace UI {
 			}
 
 			_activePage = null;
+		}
+
+		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
+			_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
 		}
 	}
 }

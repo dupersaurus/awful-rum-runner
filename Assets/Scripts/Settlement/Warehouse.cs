@@ -7,6 +7,7 @@ namespace SettlementService {
 	public class Ware {
 		public string id;
 		public float priceMod;
+		public int count;
 	}
 
 	public class Warehouse : MonoBehaviour {
@@ -17,11 +18,19 @@ namespace SettlementService {
 		[SerializeField]
 		private Ware[] _wants;
 
+		public Ware[] buyList {
+			get { return _wants; }
+		}
+
 		/// <summary>
 		/// List of cargos the settlement sells, with a scalar representing the markup from the base price
 		/// </summary>
 		[SerializeField]
 		private Ware[] _sells;
+
+		public Ware[] sellList {
+			get { return _sells; }
+		}
 
 		// Use this for initialization
 		void Start () {

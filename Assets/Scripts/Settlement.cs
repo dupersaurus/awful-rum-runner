@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SettlementService;
 
 public enum Faction {
 	Pirate,
@@ -25,9 +26,15 @@ public class Settlement : MonoBehaviour {
 	[SerializeField]
 	private Bounds _dockArea;
 
+	private Warehouse _warehouse;
+
+	public Warehouse warehouse {
+		get { return _warehouse; }
+	}
+
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+		_warehouse = GetComponent<Warehouse>();
 	}
 	
 	// Update is called once per frame

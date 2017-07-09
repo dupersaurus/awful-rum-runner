@@ -32,6 +32,12 @@ public class Ship : MonoBehaviour {
 	[SerializeField]
 	private float _turnRate = 30;
 
+	private Settlement _currentSettlement = null;
+
+	public Settlement currentSettlement {
+		get { return _currentSettlement; }
+	}
+
 	public Vector3 velocity {
 		get { return _velocity; }
 	}
@@ -72,9 +78,12 @@ public class Ship : MonoBehaviour {
 			}
 		}
 
-		_velocity = transform.rotation * Vector3.forward * currentSpeed;
-		
-		transform.position += _velocity * delta;
+		if (currentSpeed > 0) {
+			_velocity = transform.rotation * Vector3.forward * currentSpeed;
+			transform.position += _velocity * delta;
+
+			IdentifySettlement();
+		}
 	}
 
 	private void UpdateFlag() {
@@ -137,5 +146,24 @@ public class Ship : MonoBehaviour {
 	/// </summary>
 	private void IdentifySettlement() {
 		GameObject[] settlements = GameObject.FindGameObjectsWithTag("Settlement");
+
+		foreach (var go in settlements) {
+			Settlement settlement = go.GetComponent<Settlement>();
+
+			if (settlement && settlement.CanDock(this)) {
+				if (_currentSettlement != settlement) {
+					Debug.Log("Entering " + settlement.name);
+				}
+				
+				_currentSettlement = settlement;
+				return;
+			}
+		}
+
+		if (_currentSettlement != null) {
+			Debug.Log("Leaving " + _currentSettlement.name);
+		}
+
+		_currentSettlement = null;
 	}
 }
