@@ -15,10 +15,10 @@ public class PlayerAssets {
 	/// <summary>
 	/// Cash in each bank in the world
 	/// </summary>
-	private Dictionary<string, int> _bank;
+	private Dictionary<string, int> _bank = new Dictionary<string, int>();
 
 	/// <summary>
 	/// Debts owed to each bank in the world
 	/// </summary>
-	private Dictionary<string, int> _debts;
+	private Dictionary<string, int> _debts = new Dictionary<string, int>();
 }

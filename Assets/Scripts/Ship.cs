@@ -131,4 +131,11 @@ public class Ship : MonoBehaviour {
 	public void SetRudder(float rudder) {
 		_rudder = rudder;
 	}
+
+	/// <summary>
+	/// Identify the settlement, if any, the ship is in docking range with
+	/// </summary>
+	private void IdentifySettlement() {
+		GameObject[] settlements = GameObject.FindGameObjectsWithTag("Settlement");
+	}
 }
