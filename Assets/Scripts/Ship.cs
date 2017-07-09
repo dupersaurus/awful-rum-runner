@@ -10,6 +10,12 @@ public class Ship : MonoBehaviour {
 	private Transform _flag;
 
 	[SerializeField]
+	private GameObject _fullSail;
+
+	[SerializeField]
+	private GameObject _halfSail;
+
+	[SerializeField]
 	private Vector3 _velocity = Vector3.zero;
 
 	[SerializeField]
@@ -33,6 +39,7 @@ public class Ship : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		_sails = GetComponent<SailModel>();
+		SetSailState(SailState.None);
 	}
 	
 	// Update is called once per frame
@@ -75,8 +82,50 @@ public class Ship : MonoBehaviour {
 		_flag.localRotation = Quaternion.LookRotation(-direction, Vector3.up) * Quaternion.Inverse(transform.rotation);
 	}
 
+	public void SailUp() {
+		switch (_sails.sailState) {
+			case SailState.None:
+				SetSailState(SailState.Half);
+				break;
+
+			case SailState.Half:
+				SetSailState(SailState.Full);
+				break;
+		}
+	}
+
+	public void SailDown() {
+		switch (_sails.sailState) {
+			case SailState.Full:
+				SetSailState(SailState.Half);
+				break;
+
+			case SailState.Half:
+				SetSailState(SailState.None);
+				break;
+		}
+	}
+
 	public void SetSailState(SailState state) {
 		_sails.sailState = state;
+
+		switch (state) {
+			case SailState.Full:
+				_fullSail.SetActive(true);
+				_halfSail.SetActive(true);
+				break;
+
+			case SailState.Half:
+				_fullSail.SetActive(false);
+				_halfSail.SetActive(true);
+				break;
+
+			default:
+			case SailState.None:
+				_fullSail.SetActive(false);
+				_halfSail.SetActive(false);
+				break;
+		}
 	}
 
 	public void SetRudder(float rudder) {

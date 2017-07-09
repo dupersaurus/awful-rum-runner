@@ -14,5 +14,11 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		_ship.SetRudder(Input.GetAxis("Horizontal"));
+
+		if (Input.GetButtonDown("Sail Up")) {
+			_ship.SailUp();
+		} else if (Input.GetButtonDown("Sail Down")) {
+			_ship.SailDown();
+		}
 	}
 }
