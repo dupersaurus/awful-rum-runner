@@ -10,7 +10,7 @@ public class PlayerAssets {
 	/// <summary>
 	/// Cash on hand
 	/// </summary>
-	private int _cash = 0;
+	private int _cash = 100;
 
 	/// <summary>
 	/// Cash in each bank in the world
@@ -21,4 +21,8 @@ public class PlayerAssets {
 	/// Debts owed to each bank in the world
 	/// </summary>
 	private Dictionary<string, int> _debts = new Dictionary<string, int>();
+
+	public int cash {
+		get { return _cash; }
+	}
 }

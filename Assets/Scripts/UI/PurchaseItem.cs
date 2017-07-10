@@ -30,10 +30,12 @@ namespace UI {
 		[SerializeField]
 		private Text _priceLabel;
 
+		[SerializeField]
+		private float _height;
+
 		public float height {
 			get {
-				RectTransform rect = GetComponent<RectTransform>();
-				return rect.rect.height;
+				return _height;
 			}
 		}
 
@@ -44,6 +46,14 @@ namespace UI {
 		
 		// Update is called once per frame
 		void Update () {
+			
+		}
+
+		public void Select() {
+
+		}
+
+		public void Deselect() {
 			
 		}
 	}

@@ -54,6 +54,18 @@ public class CargoHold {
 		}
 	}
 
+	/// <summary>
+	/// Returns the count of a particular cargo in the hold
+	/// </summary>
+	/// <param name="id">The cargo to count</param>
+	public int GetItemCount(string id) {
+		if (_hold.ContainsKey(id)) {
+			return _hold[id];
+		} else {
+			return 0;
+		}
+	}
+
 	private void RecalculateCargoHold() {
 		_currentHold = 0;
 

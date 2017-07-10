@@ -32,6 +32,17 @@ namespace SettlementService {
 			get { return _sells; }
 		}
 
+		[SerializeField]
+		private int _cash;
+
+		public int cash {
+			get { return _cash; }
+		}
+
+		public Settlement settlement {
+			get { return GetComponent<Settlement>(); }
+		}
+
 		// Use this for initialization
 		void Start () {
 			
