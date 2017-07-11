@@ -70,6 +70,23 @@ namespace SettlementService {
 			}
 		}
 
+		/// <summary>
+		/// Modify the quantity of a ware being bought
+		/// </summary>
+		/// <param name="id">The id of the ware</param>
+		/// <param name="amount">The amount to change, positive or negative</param>
+		public void ModifyBuyingWare(string id, int amount) {
+			Ware ware = GetBuyWare(id);
+
+			if (ware != null) {
+				ware.count += amount;
+
+				if (ware.count < 0) {
+					ware.count = 0;
+				}
+			}
+		}
+
 		public void ModifyCash(int amount) {
 			_cash += amount;
 

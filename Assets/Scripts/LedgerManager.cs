@@ -51,4 +51,37 @@ public class LedgerManager {
 
 		return true;
 	}
+
+	/// <summary>
+	/// Process selling cargo to a merchant
+	/// </summary>
+	/// <param name="ship">The ship doing the selling</param>
+	/// <param name="warehouse">The merchant doing the buying</param>
+	/// <param name="assets">The player's wealth</param>
+	/// <param name="id">The cargo to sell</param>
+	/// <param name="count">The amount to sell</param>
+	/// <returns>Successfulness</returns>
+	public static bool ProcessSell(CargoHold ship, Warehouse warehouse, PlayerAssets assets, string id, int count) {
+		int price = warehouse.GetBuyPrice(id, count);
+
+		if (warehouse.cash < price) {
+			return false;
+		}
+
+		if (warehouse.GetWantQuantity(id) == 0) {
+			return false;
+		}
+
+		if (ship.GetItemCount(id) < count) {
+			return false;
+		}
+
+		ship.Remove(id, count);
+		warehouse.ModifyBuyingWare(id, -count);
+		
+		assets.ModifyCash(price);
+		warehouse.ModifyCash(-price);
+
+		return true;
+	}
 }

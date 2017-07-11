@@ -15,11 +15,6 @@ namespace UI {
 		protected virtual void Start () {
 			Hide();
 		}
-		
-		// Update is called once per frame
-		protected virtual void Update () {
-			
-		}
 
 		protected void Show() {
 			gameObject.SetActive(true);

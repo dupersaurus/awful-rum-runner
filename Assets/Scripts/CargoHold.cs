@@ -47,7 +47,8 @@ public class CargoHold {
 	}
 
 	public CargoHold() {
-
+		Add("grain", 10);
+		Add("sugar", 15);
 	}
 
 	public bool Add(string id, int amount) {

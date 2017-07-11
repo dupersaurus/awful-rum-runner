@@ -53,6 +53,14 @@ namespace UI {
 
 		private int _selectedItem = 0;
 
+		void Update() {
+			if (Input.GetButtonDown("Select Up")) {
+				SelectUp();
+			} else if (Input.GetButtonDown("Select Down")) {
+				SelectDown();
+			}
+		}
+
 		public void Show(CargoHold ship, Warehouse warehouse, PlayerAssets assets) {
 			base.Show();
 
@@ -105,7 +113,10 @@ namespace UI {
 				index = 0;
 			}
 
-			_itemList[_selectedItem].Deselect();
+			if (_selectedItem < _itemList.Count) {
+				_itemList[_selectedItem].Deselect();
+			}
+
 			_selectedItem = index;
 			_itemList[_selectedItem].Select();	
 
@@ -120,7 +131,7 @@ namespace UI {
 			}
 
 			PurchaseItem newItem = AddItem(panel, list);
-			newItem.ware = ware;
+			newItem.SetWare(ware, _warehouse);
 			return newItem;
 		}
 
@@ -133,6 +144,7 @@ namespace UI {
 
 			go.transform.SetParent(parent, false);
 			gorect.anchoredPosition = new Vector2(10, yPos);
+			uiItem.Deselect();
 
 			yPos += uiItem.height;
 			list.Add(uiItem);
@@ -169,7 +181,9 @@ namespace UI {
 		/// </summary>
 		/// <param name="amount">The amount to sell</param>
 		public void SellItem(int amount = 1) {
-
+			if (LedgerManager.ProcessSell(_ship, _warehouse, GameState.assets, _itemList[_selectedItem].ware.id, amount)) {
+				UpdateDisplay();
+			}
 		}
 
 		private void UpdateDisplay() {
@@ -185,15 +199,29 @@ namespace UI {
 
 		private void UpdateHoldCount() {
 			_playerCapacityLabel.text = (_ship.capacity - _ship.currentCargo).ToString();
+
+			foreach (var item in _itemList) {
+				item.RefreshDisplay();
+			}
 		}
 
 		private void UpdateSelectedItem() {
-			PurchaseItem item = _itemList[_selectedItem];
-			CargoList.CargoEntry cargo = CargoManager.GetCargo(item.ware.id);
-			
-			_selectedWareNameLabel.text = cargo.name;
-			_sellerHoldLabel.text = item.ware.count.ToString();
-			_playerHoldLabel.text = _ship.GetItemCount(cargo.id).ToString();
+			if (_selectedItem < _itemList.Count) {
+				PurchaseItem item = _itemList[_selectedItem];
+				CargoList.CargoEntry cargo = CargoManager.GetCargo(item.ware.id);
+				
+				_selectedWareNameLabel.text = cargo.name;
+				_sellerHoldLabel.text = item.ware.count.ToString();
+				_playerHoldLabel.text = _ship.GetItemCount(cargo.id).ToString();
+			}
+		}
+
+		private void SelectUp() {
+			SelectItem(_selectedItem - 1);
+		}
+
+		private void SelectDown() {
+			SelectItem(_selectedItem + 1);
 		}
 	}
 }
