@@ -52,5 +52,126 @@ namespace SettlementService {
 		void Update () {
 			
 		}
+
+		/// <summary>
+		/// Modify the quantity of a ware being sold
+		/// </summary>
+		/// <param name="id">The id of the ware</param>
+		/// <param name="amount">The amount to change, positive or negative</param>
+		public void ModifySellingWare(string id, int amount) {
+			Ware ware = GetSellWare(id);
+
+			if (ware != null) {
+				ware.count += amount;
+
+				if (ware.count < 0) {
+					ware.count = 0;
+				}
+			}
+		}
+
+		public void ModifyCash(int amount) {
+			_cash += amount;
+
+			if (_cash < 0) {
+				_cash = 0;
+			}
+		}
+
+		/// <summary>
+		/// Returns the price the warehouse sells a cargo for
+		/// </summary>
+		/// <param name="id">Id of the cargo to sell</param>
+		/// <param name="count">Optional cargo count</param>
+		/// <returns>The selling price</returns>
+		public int GetSellPrice(string id, int count = 1) {
+			Ware ware = GetSellWare(id);
+
+			if (ware == null) {
+				return 0;
+			}
+
+			int basePrice = Mathf.RoundToInt(ware.priceMod * CargoManager.GetCargo(id).price);
+
+			return basePrice * count;
+		}
+
+		/// <summary>
+		/// Returns the price the warehouse buys a cargo for
+		/// </summary>
+		/// <param name="id">Id of the cargo to buy</param>
+		/// <param name="count">Optional cargo count</param>
+		/// <returns>The buying price</returns>
+		public int GetBuyPrice(string id, int count = 1) {
+			Ware ware = GetBuyWare(id);
+
+			if (ware == null) {
+				return 0;
+			}
+
+			int basePrice = Mathf.RoundToInt(ware.priceMod * CargoManager.GetCargo(id).price);
+
+			return basePrice * count;
+		}
+
+		public int GetPrice(string id, int count = 1) {
+			if (GetSellWare(id) != null) {
+				return GetSellPrice(id, count);
+			} else if (GetBuyWare(id) != null) {
+				return GetBuyPrice(id, count);
+			}
+			
+			return 0;
+		}
+
+		private Ware GetSellWare(string id) {
+			foreach (var ware in _sells) {
+				if (ware.id == id) {
+					return ware;
+				}
+			}
+
+			return null;
+		}
+
+		private Ware GetBuyWare(string id) {
+			foreach (var ware in _wants) {
+				if (ware.id == id) {
+					return ware;
+				}
+			}
+
+			return null;
+		}
+
+		/// <summary>
+		/// Returns the amount of a cargo the settlement has to sell
+		/// </summary>
+		/// <param name="id">The id of the cargo</param>
+		/// <returns>The quatity of cargo at the merchant</returns>
+		public int GetWareQuantity(string id) {
+			Ware ware = GetSellWare(id);
+
+			if (ware == null) {
+				return 0;
+			}
+
+			return ware.count;
+		}
+
+		/// <summary>
+		/// Returns the amount of a cargo the settlement wants to buy
+		/// </summary>
+		/// <param name="id">The id of the cargo</param>
+		/// <returns>The quatity of cargo to buy</returns>
+		public int GetWantQuantity(string id) {
+			Ware ware = GetBuyWare(id);
+
+			if (ware == null) {
+				return 0;
+			}
+
+			return ware.count;
+		}
 	}
 }

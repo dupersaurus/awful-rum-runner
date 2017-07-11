@@ -18,6 +18,8 @@ namespace UI {
 		void Awake () {
 			_instance = this;
 			_warehouse = GetComponentInChildren<WarehouseUI>();
+
+			_warehouse.ui = this;
 		}
 		
 		// Update is called once per frame
@@ -35,6 +37,7 @@ namespace UI {
 
 		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
 			_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
+			_instance._activePage = _instance._warehouse;
 		}
 	}
 }

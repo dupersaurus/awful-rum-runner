@@ -18,6 +18,12 @@ namespace UI {
 		private UnityEngine.UI.Button _buyingButton;
 
 		[SerializeField]
+		private UnityEngine.UI.Button _buyButton;
+
+		[SerializeField]
+		private UnityEngine.UI.Button _sellButton;
+
+		[SerializeField]
 		private UnityEngine.UI.Text _playerGoldLabel;
 
 		[SerializeField]
@@ -67,6 +73,9 @@ namespace UI {
 		public void ShowSellScreen() {
 			ClearItems();
 
+			_sellButton.gameObject.SetActive(false);
+			_buyButton.gameObject.SetActive(true);
+
 			foreach (var item in _warehouse.sellList) {
 				GetItemForWare(item, _itemList, _listPanel);
 			}
@@ -77,6 +86,9 @@ namespace UI {
 
 		public void ShowBuyScreen() {
 			ClearItems();
+
+			_sellButton.gameObject.SetActive(true);
+			_buyButton.gameObject.SetActive(false);
 
 			foreach (var item in _warehouse.buyList) {
 				GetItemForWare(item, _itemList, _listPanel);
@@ -143,19 +155,27 @@ namespace UI {
 		}
 
 		/// <summary>
-		/// Buy an amount of the selected item
+		/// Buy an amount of the selected item from the merchant
 		/// </summary>
 		/// <param name="amount">The amount to buy</param>
 		public void BuyItem(int amount = 1) {
-
+			if (LedgerManager.ProcessBuy(_ship, _warehouse, GameState.assets, _itemList[_selectedItem].ware.id, amount)) {
+				UpdateDisplay();
+			}
 		}
 
 		/// <summary>
-		/// Sell an amount of the selected item
+		/// Sell an amount of the selected item to the merchant
 		/// </summary>
 		/// <param name="amount">The amount to sell</param>
 		public void SellItem(int amount = 1) {
 
+		}
+
+		private void UpdateDisplay() {
+			UpdateMoneyCount();
+			UpdateHoldCount();
+			UpdateSelectedItem();
 		}
 
 		private void UpdateMoneyCount() {

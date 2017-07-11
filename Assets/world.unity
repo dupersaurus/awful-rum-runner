@@ -9440,6 +9440,11 @@ Prefab:
       propertyPath: m_Name
       value: Warehouse
       objectReference: {fileID: 0}
+    - target: {fileID: 114430986026662296, guid: 44f995808d0a14ebf830c06c9ce8e623,
+        type: 2}
+      propertyPath: m_Text
+      value: Sell
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44f995808d0a14ebf830c06c9ce8e623, type: 2}
   m_IsPrefabParent: 0

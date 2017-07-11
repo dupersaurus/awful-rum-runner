@@ -54,7 +54,17 @@ namespace UI {
 		}
 
 		public void Deselect() {
-			
+
+		}
+
+		public void SetWare(SettlementService.Ware ware, SettlementService.Warehouse warehouse) {
+			_ware = ware;
+
+			var cargo = CargoManager.GetCargo(_ware.id);
+
+			_nameLabel.text = cargo.name;
+			_countLabel.text = "x" + _ware.count;
+			_priceLabel.text = "$" + warehouse.GetPrice(_ware.id, 1);
 		}
 	}
 }

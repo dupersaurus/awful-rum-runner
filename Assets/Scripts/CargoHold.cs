@@ -7,16 +7,37 @@ using UnityEngine;
 /// </summary>
 public class CargoHold {
 
+	/// <summary>
+	/// The total hold size
+	/// </summary>
 	private int _capacity = 700;	
 
+	/// <summary>
+	/// The total hold size
+	/// </summary>
+	/// <returns>The total hold size</returns>
 	public int capacity {
 		get { return _capacity; }
 	}
 
+	/// <summary>
+	/// The amount of cargo in the hold
+	/// </summary>
 	private int _currentHold = 0;
 
+	/// <summary>
+	/// The amount of cargo in the hold
+	/// </summary>
 	public int currentCargo {
 		get { return _currentHold; }
+	}
+
+	/// <summary>
+	/// The amount of cargo space remaining
+	/// </summary>
+	/// <returns>The amount of cargo space remaining</returns>
+	public int availableSpace {
+		get { return _capacity - _currentHold; }
 	}
 
 	private Dictionary<string, int> _hold = new Dictionary<string, int>();

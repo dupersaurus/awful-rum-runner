@@ -10,7 +10,7 @@ public class PlayerAssets {
 	/// <summary>
 	/// Cash on hand
 	/// </summary>
-	private int _cash = 100;
+	private int _cash = 200;
 
 	/// <summary>
 	/// Cash in each bank in the world
@@ -24,5 +24,18 @@ public class PlayerAssets {
 
 	public int cash {
 		get { return _cash; }
+	}
+
+	/// <summary>
+	/// Modifies the cash on hand by a certain amount. The cash on hand cannot
+	/// go below 0.
+	/// </summary>
+	/// <param name="amount"></param>
+	public void ModifyCash(int amount) {
+		_cash += amount;
+
+		if (_cash < 0) {
+			_cash = 0;
+		}
 	}
 }
