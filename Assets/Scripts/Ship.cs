@@ -42,6 +42,10 @@ public class Ship : MonoBehaviour {
 		get { return _velocity; }
 	}
 
+	public Vector3 position {
+		get { return transform.position; }
+	}
+
 	// Use this for initialization
 	void Awake () {
 		_sails = GetComponent<SailModel>();
