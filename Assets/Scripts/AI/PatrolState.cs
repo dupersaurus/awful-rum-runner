@@ -54,25 +54,6 @@ public class PatrolState : AIState {
 	}
 
 	private void SteerToWaypoint() {
-		Vector3 waypoint = _waypoints[_currentWaypointIndex];	
-		Vector3 diff = waypoint - _ship.position;
-
-		float angle = Vector3.Angle(_ship.velocity, diff);
-
-		if (angle > 5) {
-			
-			if (angle > 45) {
-				_ship.SetSailState(SailState.Half);
-			}
-
-			if (Vector3.Cross(_ship.velocity.normalized, diff).y > 0) {
-				_ship.SetRudder(1);
-			} else {
-				_ship.SetRudder(-1);
-			}
-		} else {
-			_ship.SetSailState(SailState.Full);
-			_ship.SetRudder(0);
-		}
+		SteerToPoint(_waypoints[_currentWaypointIndex]);
 	}
 }

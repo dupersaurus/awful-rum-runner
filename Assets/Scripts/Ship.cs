@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour {
 
+	private IController _controller;
+
 	private SailModel _sails;
 
 	[SerializeField]
@@ -19,7 +21,10 @@ public class Ship : MonoBehaviour {
 	private Vector3 _velocity = Vector3.zero;
 
 	[SerializeField]
-	private float _drag = 10;
+	private float _mass = 10;
+
+	[SerializeField]
+	private float _drag = 2;
 
 	/// <summary>
 	/// The rudder position. Negative is left, positive is right
@@ -46,8 +51,19 @@ public class Ship : MonoBehaviour {
 		get { return transform.position; }
 	}
 
+	public float mass {
+		get { 
+			if (_controller is PlayerController) {
+				return _mass + GameState.hold.currentCargo / 100;
+			} else {
+				return _mass;
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Awake () {
+		_controller = GetComponent<IController>();
 		_sails = GetComponent<SailModel>();
 		SetSailState(SailState.None);
 	}
@@ -65,7 +81,7 @@ public class Ship : MonoBehaviour {
 
 		// Update wind and velocity
 		Vector3 windForce = _sails.getSailForce();
-		float desiredSpeed = windForce.magnitude / _drag;
+		float desiredSpeed = windForce.magnitude / mass;
 		float currentSpeed = _velocity.magnitude;
 
 		if (desiredSpeed > currentSpeed) {

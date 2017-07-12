@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class ChaseState : AIState {
 
-	// Use this for initialization
-	void Start () {
-		
+	/// <summary>
+	/// The ship to chase
+	/// </summary>
+	[SerializeField]
+	private Ship _target;
+
+	/// <summary>
+	/// The ship to chase
+	/// </summary>
+	public Ship target {
+		set { _target = value; }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		SteerToPoint(_target.position);
 	}
 
 	/// <summary>

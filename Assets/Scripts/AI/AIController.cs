@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIController : MonoBehaviour {
+public class AIController : MonoBehaviour, IController {
 
 	[SerializeField]
 	private AIState _initialState;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UI;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour, IController {
 
 	private Ship _ship = null;
 
