@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour, IController {
 	
 	// Update is called once per frame
 	void Update () {
-		if (UIMain.hasFocus) {
+		if (GameState.globalPause) {
 			return;
 		}
 

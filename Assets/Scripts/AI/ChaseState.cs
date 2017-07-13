@@ -8,7 +8,7 @@ public class ChaseState : AIState {
 	/// The ship to chase
 	/// </summary>
 	[SerializeField]
-	private Ship _target;
+	protected Ship _target;
 
 	/// <summary>
 	/// The ship to chase
@@ -16,10 +16,36 @@ public class ChaseState : AIState {
 	public Ship target {
 		set { _target = value; }
 	}
+
+	[SerializeField]
+	private float _boardingDistance = 3;
+
+	public float boardingDistance {
+		get { return _boardingDistance; }
+	}
 	
 	// Update is called once per frame
-	void Update () {
-		SteerToPoint(_target.position);
+	protected void Update () {
+		if (!CheckForBoarding()) {
+			SteerToPoint(_target.position);
+		}
+	}
+
+	/// <summary>
+	/// Check for being close enough to demand boarding
+	/// </summary>
+	/// <returns>True if close enough</returns>
+	protected virtual bool CheckForBoarding() {
+		Vector3 heading = GetHeadingToTarget();
+
+		if (heading.sqrMagnitude <= _boardingDistance * _boardingDistance) {
+			if (BoardingManager.CanDemandBoarding(_ship, _target)) {
+				BoardingState boarding = _controller.ChangeToState<BoardingState>();
+				boarding.target = _target;
+			}
+		}
+
+		return false;
 	}
 
 	/// <summary>
@@ -34,5 +60,9 @@ public class ChaseState : AIState {
 	/// </summary>
 	protected override void LoseControl() {
 
+	}
+
+	protected Vector3 GetHeadingToTarget() {
+		return _target.position - _ship.position;
 	}
 }

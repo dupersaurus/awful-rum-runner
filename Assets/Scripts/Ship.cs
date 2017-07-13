@@ -61,6 +61,26 @@ public class Ship : MonoBehaviour {
 		}
 	}
 
+	public CargoHold cargoHold {
+		get { return GameState.hold; }
+	}
+
+	void OnDrawGizmos() {
+		ChaseState chase = GetComponent<ChaseState>();
+
+		if (chase != null) {
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawWireSphere(position, chase.boardingDistance);
+		}
+
+		BoardingState boarding = GetComponent<BoardingState>();
+
+		if (boarding != null) {
+			Gizmos.color = Color.magenta;
+			Gizmos.DrawWireSphere(position, boarding.boardRadius);
+		}
+	}
+
 	// Use this for initialization
 	void Awake () {
 		_controller = GetComponent<IController>();
@@ -70,6 +90,10 @@ public class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (GameState.globalPause) {
+			return;
+		}
+
 		float delta = Time.fixedDeltaTime;
 
 		UpdateFlag();
@@ -155,6 +179,11 @@ public class Ship : MonoBehaviour {
 				_halfSail.SetActive(false);
 				break;
 		}
+	}
+
+	public void FullStop() {
+		_sails.sailState = SailState.None;
+		_velocity = Vector3.zero;
 	}
 
 	public void SetRudder(float rudder) {

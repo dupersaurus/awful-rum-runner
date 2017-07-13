@@ -32,12 +32,15 @@ namespace UI {
 				_activePage.Hide();
 			}
 
+			GameState.ReleaseGlobalPause(_activePage);
 			_activePage = null;
 		}
 
 		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
 			_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
 			_instance._activePage = _instance._warehouse;
+
+			GameState.SetGlobalPause(_instance._activePage);
 		}
 	}
 }

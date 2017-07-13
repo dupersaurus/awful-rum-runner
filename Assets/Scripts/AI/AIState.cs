@@ -34,7 +34,12 @@ public abstract class AIState : MonoBehaviour {
 	/// </summary>
 	protected abstract void LoseControl(); 
 
-	protected void SteerToPoint(Vector3 waypoint) {
+	/// <summary>
+	/// Steer the ship to a point
+	/// </summary>
+	/// <param name="waypoint">The point to steer to</param>
+	/// <returns>The vector to the point at the start of the steer</returns>
+	protected Vector3 SteerToPoint(Vector3 waypoint) {
 		Vector3 diff = waypoint - _ship.position;
 
 		float angle = Vector3.Angle(_ship.velocity, diff);
@@ -54,5 +59,7 @@ public abstract class AIState : MonoBehaviour {
 			_ship.SetSailState(SailState.Full);
 			_ship.SetRudder(0);
 		}
+
+		return diff;
 	}
 }
