@@ -1,8 +1,8 @@
 {
     "cargos":
     [
-{"id":"grain","price":1,"legal":true,"description":"Plain old grain","name":"Grain"},{"id":"sugar","price":2,"legal":true,"description":"Natural cane sugar","name":"Sugar"},{"id":"hooch","price":50,"legal":false,"description":"Adulterated, watered-down hooch","name":"Hooch"},        {
-"id":"pure-hooch",            "price": 100,
+{"hideRatio":5,"id":"grain","price":1,"legal":true,"description":"Plain old grain","name":"Grain"},{"hideRatio":10,"id":"sugar","price":2,"legal":true,"description":"Natural cane sugar","name":"Sugar"},{"hideRatio":0,"id":"hooch","price":50,"legal":false,"description":"Adulterated, watered-down hooch","name":"Hooch"},        {
+"hideRatio":0,"id":"pure-hooch",            "price": 100,
             "legal": false,
             "description": "Pure illicit hooch",
             "name": "Pure Hooch"

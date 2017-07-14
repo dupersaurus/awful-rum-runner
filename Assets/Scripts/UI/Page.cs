@@ -13,7 +13,7 @@ namespace UI {
 
 		// Use this for initialization
 		protected virtual void Start () {
-			Hide();
+			//Hide();
 		}
 
 		protected void Show() {

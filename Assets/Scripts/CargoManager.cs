@@ -34,6 +34,7 @@ public struct CargoList {
 		public bool legal;
 		public int price;
 		public string id;
+		public int hideRatio;
 	}
 
 	public CargoEntry[] cargos;

@@ -17,9 +17,9 @@ namespace UI {
 		// Use this for initialization
 		void Awake () {
 			_instance = this;
-			_warehouse = GetComponentInChildren<WarehouseUI>();
+			//_warehouse = GetComponentInChildren<WarehouseUI>();
 
-			_warehouse.ui = this;
+			//_warehouse.ui = this;
 		}
 		
 		// Update is called once per frame
@@ -36,11 +36,27 @@ namespace UI {
 			_activePage = null;
 		}
 
-		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
-			_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
-			_instance._activePage = _instance._warehouse;
+		protected Page OpenScreen(string prefab) {
+			GameObject go = Instantiate(Resources.Load("UI/" + prefab)) as GameObject;
+			go.transform.SetParent(GetComponent<RectTransform>(), false);
 
-			GameState.SetGlobalPause(_instance._activePage);
+			RectTransform gorect = go.GetComponent<RectTransform>();
+			Page page = go.GetComponent<Page>();
+
+			page.ui = this;
+			_activePage = page;
+
+			return page;
+		}
+
+		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
+			WarehouseUI page = _instance.OpenScreen("Settlement Wares") as WarehouseUI;
+			page.Show(GameState.hold, warehouse, GameState.assets);
+
+			//_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
+			//_instance._activePage = _instance._warehouse;
+
+			GameState.SetGlobalPause(page);
 		}
 	}
 }

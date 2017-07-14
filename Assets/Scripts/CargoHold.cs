@@ -95,4 +95,42 @@ public class CargoHold {
 			_currentHold += item.Value;
 		}
 	}
+
+	/// <summary>
+	/// Returns if the hold is completely legal
+	/// </summary>
+	/// <returns>Whether the conents of the hold is fully legal</returns>
+	public bool IsLegal() {
+		foreach (var item in _hold) {
+			if (item.Value > 0 && !CargoManager.GetCargo(item.Key).legal) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/// <summary>
+	/// Hiding factor is a number representing how well any illegal cargo is hidden
+	/// </summary>
+	/// <returns></returns>
+	public int GetHidingFactor() {
+		float totalIllegal = 0;
+		float totalHideVolume = 0;
+		int factor = 0;
+
+		foreach (var item in _hold) {
+			var cargo = CargoManager.GetCargo(item.Key);
+
+			if (cargo.legal) {
+				totalHideVolume = item.Value / cargo.hideRatio;
+			} else {
+				totalIllegal = item.Value;
+			}
+		}
+
+		factor = Mathf.RoundToInt((totalHideVolume / totalIllegal) * 50);
+
+		return factor;
+	}
 }
