@@ -49,6 +49,7 @@ public class CargoHold {
 	public CargoHold() {
 		Add("grain", 10);
 		Add("sugar", 15);
+		Add("hooch", 2);
 	}
 
 	public bool Add(string id, int amount) {
@@ -123,9 +124,9 @@ public class CargoHold {
 			var cargo = CargoManager.GetCargo(item.Key);
 
 			if (cargo.legal) {
-				totalHideVolume = item.Value / cargo.hideRatio;
+				totalHideVolume += item.Value / cargo.hideRatio;
 			} else {
-				totalIllegal = item.Value;
+				totalIllegal += item.Value;
 			}
 		}
 

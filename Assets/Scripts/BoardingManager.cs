@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardingManager {
 	private static BoardingManager _instance;
 
-	private static BoardingManager instance {
+	public static BoardingManager instance {
 		get {
 			if (_instance == null) {
 				_instance = new BoardingManager();
@@ -61,6 +61,8 @@ public class BoardingManager {
 
 		_actor.FullStop();
 		_target.FullStop();
+
+		UI.UIMain.OpenBoardingAction();
 	}
 
 	/// <summary>
@@ -68,5 +70,41 @@ public class BoardingManager {
 	/// </summary>
 	public static void EndBoardingAction() {
 
+	}
+
+	/// <summary>
+	/// Returns the odds for passing the inspection
+	/// </summary>
+	/// <returns>Number [0,1]</returns>
+	public float GetInspectionOdds() {
+		if (_target.cargoHold.IsLegal()) {
+			return 1;
+		}
+
+		int hidingFactor = _target.cargoHold.GetHidingFactor();
+		int inspectionSkill = (_actor.crew as HunterCrew).inspectionSkill;
+
+		// even ratio is even odds?
+		return (float)hidingFactor / (float)(hidingFactor + inspectionSkill);
+	}
+
+	public bool IsLegal() {
+		return _target.cargoHold.IsLegal();
+	}
+
+	/// <summary>
+	/// Resolve the boarding action
+	/// </summary>
+	public bool ResolveBoarding() {
+		float odds = GetInspectionOdds();
+		bool pass = Random.value <= odds;
+
+		if (pass) {
+			return true;
+		}
+
+		
+
+		return false;
 	}
 }

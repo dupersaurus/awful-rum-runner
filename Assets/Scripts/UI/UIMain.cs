@@ -53,8 +53,12 @@ namespace UI {
 			WarehouseUI page = _instance.OpenScreen("Settlement Wares") as WarehouseUI;
 			page.Show(GameState.hold, warehouse, GameState.assets);
 
-			//_instance._warehouse.Show(GameState.hold, warehouse, GameState.assets);
-			//_instance._activePage = _instance._warehouse;
+			GameState.SetGlobalPause(page);
+		}
+
+		public static void OpenBoardingAction() {
+			BoardingUI page = _instance.OpenScreen("Boarding Action") as BoardingUI;
+			page.Begin();
 
 			GameState.SetGlobalPause(page);
 		}

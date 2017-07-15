@@ -65,6 +65,10 @@ public class Ship : MonoBehaviour {
 		get { return GameState.hold; }
 	}
 
+	public Crew crew {
+		get { return GetComponent<Crew>(); }
+	}
+
 	void OnDrawGizmos() {
 		ChaseState chase = GetComponent<ChaseState>();
 

@@ -78,6 +78,11 @@ namespace UI {
 			ShowSellScreen();
 		}
 
+		public override void Close() {
+			GameState.ReleaseGlobalPause(this);
+			base.Close();
+		}
+
 		public void ShowSellScreen() {
 			ClearItems();
 
