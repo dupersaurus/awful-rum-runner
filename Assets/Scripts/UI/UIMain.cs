@@ -30,13 +30,18 @@ namespace UI {
 		public void Close() {
 			if (_activePage) {
 				_activePage.Hide();
+				GameState.ReleaseGlobalPause(_activePage);
+				
+				Destroy(_activePage);
 			}
-
-			GameState.ReleaseGlobalPause(_activePage);
 			_activePage = null;
 		}
 
 		protected Page OpenScreen(string prefab) {
+			if (_activePage != null) {
+				Close();
+			}
+
 			GameObject go = Instantiate(Resources.Load("UI/" + prefab)) as GameObject;
 			go.transform.SetParent(GetComponent<RectTransform>(), false);
 
@@ -59,6 +64,13 @@ namespace UI {
 		public static void OpenBoardingAction() {
 			BoardingUI page = _instance.OpenScreen("Boarding Action") as BoardingUI;
 			page.Begin();
+
+			GameState.SetGlobalPause(page);
+		}
+
+		public static void OpenPayFine(BoardingManager manager) {
+			PayFineUI page = _instance.OpenScreen("Fine") as PayFineUI;
+			page.Begin(manager);
 
 			GameState.SetGlobalPause(page);
 		}

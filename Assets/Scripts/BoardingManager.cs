@@ -25,6 +25,12 @@ public class BoardingManager {
 	/// </summary>
 	private static Ship _target = null;
 
+	private int _fineBaseMultiplier = 5;
+
+	public int fineModifier {
+		get { return _fineBaseMultiplier; }
+	}
+
 	public static bool CanDemandBoarding(Ship actor, Ship target) {
 		return _target == null;
 	}
@@ -100,11 +106,49 @@ public class BoardingManager {
 		bool pass = Random.value <= odds;
 
 		if (pass) {
-			return true;
+			//return true;
 		}
 
-		
+		UI.UIMain.OpenPayFine(_instance);
 
 		return false;
+	}
+
+	/// <summary>
+	/// Cost to bribe
+	/// </summary>
+	/// <returns></returns>
+	public int GetBribeCost() {
+		int baseSkill = (_actor.crew as HunterCrew).bribeSkill;
+
+		return Mathf.RoundToInt(Mathf.Lerp(0, 10000, baseSkill / 100));
+	}
+
+	public int GetIllegalCargoSize() {
+		var cargos = _target.cargoHold.GetIllegalCargo();
+		int total = 0;
+
+		foreach (var item in cargos) {
+			total += item.Value;
+		}
+
+		return total;
+	}
+
+	public int GetIllegalCargoValue() {
+		var cargos = _target.cargoHold.GetIllegalCargo();
+		int totalFine = 0;
+
+		foreach (var item in cargos) {
+			var desc = CargoManager.GetCargo(item.Key);
+
+			totalFine += desc.price * item.Value; 
+		}
+
+		return totalFine;
+	}
+
+	public int GetFineCost() {
+		return GetIllegalCargoValue() * _fineBaseMultiplier;
 	}
 }

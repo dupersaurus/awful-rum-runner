@@ -111,6 +111,20 @@ public class CargoHold {
 		return true;
 	}
 
+	public Dictionary<string, int> GetIllegalCargo() {
+		var list = new Dictionary<string, int>();
+
+		foreach (var item in _hold) {
+			var cargo = CargoManager.GetCargo(item.Key);
+
+			if (!cargo.legal) {
+				list.Add(item.Key, item.Value);
+			}
+		}
+
+		return list;
+	}
+
 	/// <summary>
 	/// Hiding factor is a number representing how well any illegal cargo is hidden
 	/// </summary>
