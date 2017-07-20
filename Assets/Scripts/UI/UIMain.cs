@@ -68,6 +68,15 @@ namespace UI {
 			GameState.SetGlobalPause(page);
 		}
 
+		public static ResolveBoardingUI OpenResolveBoarding() {
+			ResolveBoardingUI page = _instance.OpenScreen("Resolve Boarding") as ResolveBoardingUI;
+			page.Begin();
+
+			GameState.SetGlobalPause(page);
+
+			return page;
+		}
+
 		public static void OpenPayFine(BoardingManager manager) {
 			PayFineUI page = _instance.OpenScreen("Fine") as PayFineUI;
 			page.Begin(manager);

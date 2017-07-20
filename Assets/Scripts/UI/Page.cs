@@ -8,6 +8,7 @@ namespace UI {
 		private UIMain _ui;
 
 		public UIMain ui {
+			get { return _ui; }
 			set { _ui = value; }
 		}
 

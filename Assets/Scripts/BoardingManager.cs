@@ -31,6 +31,8 @@ public class BoardingManager {
 		get { return _fineBaseMultiplier; }
 	}
 
+	private bool _hasBoardingPassed = false;
+
 	public static bool CanDemandBoarding(Ship actor, Ship target) {
 		return _target == null;
 	}
@@ -103,15 +105,15 @@ public class BoardingManager {
 	/// </summary>
 	public bool ResolveBoarding() {
 		float odds = GetInspectionOdds();
-		bool pass = Random.value <= odds;
+		_hasBoardingPassed = Random.value <= odds;
 
-		if (pass) {
-			//return true;
-		}
+		_hasBoardingPassed = false;
 
-		UI.UIMain.OpenPayFine(_instance);
+		return _hasBoardingPassed;
+	}
 
-		return false;
+	public bool hasPassedBoarding {
+		get { return _hasBoardingPassed; }
 	}
 
 	/// <summary>

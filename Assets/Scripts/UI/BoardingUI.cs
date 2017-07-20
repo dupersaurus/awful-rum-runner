@@ -7,32 +7,41 @@ namespace UI {
 	public class BoardingUI : Page {
 
 		[SerializeField]
-		private RectTransform _oddsBar;
+		protected RectTransform _oddsBar;
 
 		[SerializeField]
-		private RectTransform _friendBar;
+		protected RectTransform _friendBar;
 		
 		[SerializeField]
-		private RectTransform _foeBar;
+		protected RectTransform _foeBar;
 
 		[SerializeField]
-		private Text _oddsLabel;
+		protected Text _oddsLabel;
 
 		[SerializeField]
-		private Button _resolveButton;
+		protected Button _resolveButton;
 
 		[SerializeField]
-		private Button _closeButton;
+		protected Button _closeButton;
 
-		private BoardingManager _manager;
+		protected BoardingManager _manager;
 
-		public void Begin() {
+		public virtual void Begin() {
 			_manager = BoardingManager.instance;
 
 			float odds = _manager.GetInspectionOdds();
 			SetFriendBarScale(odds);
 			SetFoeBarScale(1 - odds);
 
+			SetOddsLabel(odds);
+
+			_resolveButton.gameObject.SetActive(true);
+			_closeButton.gameObject.SetActive(false);
+
+			Show();
+		}
+
+		protected virtual void SetOddsLabel(float odds) {
 			if (_manager.IsLegal()) {
 				_oddsLabel.text = "We're completely legal";
 			} else {
@@ -48,15 +57,10 @@ namespace UI {
 					_oddsLabel.text = "Fuck";
 				}
 			}
-
-			_resolveButton.gameObject.SetActive(true);
-			_closeButton.gameObject.SetActive(false);
-
-			Show();
 		}
 
 		private void SetFriendBarScale(float scale) {
-			float totalWidth = _oddsBar.rect.width;
+			float totalWidth = barWidth;
 			
 			Vector2 leftSize = _friendBar.offsetMax;
 			leftSize.x = totalWidth * scale;
@@ -65,7 +69,7 @@ namespace UI {
 		}
 
 		private void SetFoeBarScale(float scale) {
-			float totalWidth = _oddsBar.rect.width;
+			float totalWidth = barWidth;
 
 			Vector2 rightSize = _foeBar.offsetMin;
 			rightSize.x = totalWidth * -scale;
@@ -73,12 +77,20 @@ namespace UI {
 			_foeBar.offsetMin = rightSize;
 		}
 
-		public void Resolve() {
-			if (_manager.ResolveBoarding()) {
+		protected float barWidth {
+			get { return _oddsBar.rect.width; }
+		}
+
+		public virtual void Resolve() {
+			float odds = _manager.GetInspectionOdds();
+
+			if (odds == 1) {
 				_oddsLabel.text = "You are free to go, sir";
 
 				_resolveButton.gameObject.SetActive(false);
 				_closeButton.gameObject.SetActive(true);
+			} else {
+				UIMain.OpenResolveBoarding();
 			}
 		}
 	}
