@@ -38,7 +38,7 @@ namespace UI {
 			var wind = WindField.instance.GetDirectionAtPosition(player.position);
 			float windAngle = Vector3.Angle(Vector3.forward, wind) + 180;
 
-			if (Vector3.Cross(Vector3.forward, wind).y < 0) {
+			if (Vector3.Cross(Vector3.forward, wind).y >= 0) {
 				windAngle = 360 - windAngle;
 			}
 
