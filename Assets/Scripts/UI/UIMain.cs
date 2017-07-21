@@ -102,5 +102,13 @@ namespace UI {
 
 			return icon;
 		}
+
+		public static TimeToBoardFloater AddTimeToBoard(Transform target) {
+			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
+			var icon = floaters.AddWorldFloater("Time To Board", target);
+			icon.offset = 0.8f;
+
+			return icon as TimeToBoardFloater;
+		}
 	}
 }
