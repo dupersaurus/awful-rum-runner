@@ -20,6 +20,8 @@ namespace UI {
 			//_warehouse = GetComponentInChildren<WarehouseUI>();
 
 			//_warehouse.ui = this;
+
+			OpenHUD();
 		}
 		
 		// Update is called once per frame
@@ -28,9 +30,14 @@ namespace UI {
 		}
 
 		public void Close() {
+			ClearScreen();
+			OpenHUD();
+		}
+
+		protected void ClearScreen() {
 			if (_activePage) {
 				_activePage.Hide();
-				GameState.ReleaseGlobalPause(_activePage);
+				GameState.ReleaseGlobalPause(_activePage.name);
 				
 				Destroy(_activePage);
 			}
@@ -39,7 +46,7 @@ namespace UI {
 
 		protected Page OpenScreen(string prefab) {
 			if (_activePage != null) {
-				Close();
+				ClearScreen();
 			}
 
 			GameObject go = Instantiate(Resources.Load("UI/" + prefab)) as GameObject;
@@ -54,25 +61,29 @@ namespace UI {
 			return page;
 		}
 
+		protected void OpenHUD() {
+			_instance.OpenScreen("HUD");
+		}
+
 		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
 			WarehouseUI page = _instance.OpenScreen("Settlement Wares") as WarehouseUI;
 			page.Show(GameState.hold, warehouse, GameState.assets);
 
-			GameState.SetGlobalPause(page);
+			GameState.SetGlobalPause(page.name);
 		}
 
 		public static void OpenBoardingAction() {
 			BoardingUI page = _instance.OpenScreen("Boarding Action") as BoardingUI;
 			page.Begin();
 
-			GameState.SetGlobalPause(page);
+			GameState.SetGlobalPause(page.name);
 		}
 
 		public static ResolveBoardingUI OpenResolveBoarding() {
 			ResolveBoardingUI page = _instance.OpenScreen("Resolve Boarding") as ResolveBoardingUI;
 			page.Begin();
 
-			GameState.SetGlobalPause(page);
+			GameState.SetGlobalPause(page.name);
 
 			return page;
 		}
@@ -81,7 +92,7 @@ namespace UI {
 			PayFineUI page = _instance.OpenScreen("Fine") as PayFineUI;
 			page.Begin(manager);
 
-			GameState.SetGlobalPause(page);
+			GameState.SetGlobalPause(page.name);
 		}
 	}
 }

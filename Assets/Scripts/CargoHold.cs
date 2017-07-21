@@ -78,6 +78,13 @@ public class CargoHold {
 	}
 
 	/// <summary>
+	/// Clears all contents of the hold
+	/// </summary>
+	public void ClearContents() {
+		_hold.Clear();
+	}
+
+	/// <summary>
 	/// Returns the count of a particular cargo in the hold
 	/// </summary>
 	/// <param name="id">The cargo to count</param>

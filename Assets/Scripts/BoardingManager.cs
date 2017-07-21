@@ -117,6 +117,20 @@ public class BoardingManager {
 	}
 
 	/// <summary>
+	/// Apply the penalty for the boarding
+	/// </summary>
+	public void ApplyBoardingPenalty() {
+		int cash = GameState.assets.cash;
+		int fine = GetFineCost();
+
+		if (cash >= fine) {
+			GameState.assets.ModifyCash(-fine);
+		} else {
+			GameState.Arrest();
+		}
+	}
+
+	/// <summary>
 	/// Cost to bribe
 	/// </summary>
 	/// <returns></returns>

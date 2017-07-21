@@ -30,6 +30,10 @@ public class WindField {
 		return new Vector3(-1, 0, 1).normalized;
 	}
 
+	public Vector3 GetDirectionAtPosition(Vector3 pos) {
+		return new Vector3(-1, 0, 1).normalized;
+	}
+
 	/// <summary>
 	/// The speed of the wind at a given position
 	/// </summary>
