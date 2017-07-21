@@ -33,6 +33,7 @@ public class BoardingState : ChaseState {
 	protected override void TakeControl() {
 		if (BoardingManager.DemandBoarding(_ship, _target)) {
 			_timeOfDemand = Time.time;
+			UI.UIMain.DemandBoarding(_ship.transform);
 		} else {
 			_controller.ChangeToState<ChaseState>();
 		}

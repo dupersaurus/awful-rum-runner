@@ -94,5 +94,13 @@ namespace UI {
 
 			GameState.SetGlobalPause(page.name);
 		}
+
+		public static WorldSpaceFloater DemandBoarding(Transform target) {
+			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
+			var icon = floaters.AddWorldFloater("Submit Boarding Icon", target);
+			icon.offset = 0.8f;
+
+			return icon;
+		}
 	}
 }
