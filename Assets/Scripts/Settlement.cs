@@ -6,7 +6,8 @@ using SettlementService;
 public enum Faction {
 	Pirate,
 	Islander,
-	Mainlander
+	Mainlander,
+	Empire
 }
 
 public class Settlement : MonoBehaviour {

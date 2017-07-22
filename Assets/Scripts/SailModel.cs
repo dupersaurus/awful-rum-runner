@@ -38,9 +38,11 @@ public class SailModel : MonoBehaviour {
 		}
 
 		Vector3 windDirection = _windField.GetDirectionAtPosition(transform.position);
+		//var debugWindDirection = Vector3.Angle(Vector3.forward, windDirection);
 		
 		// Define 180 degrees as running
-		float windAngle = 1 - Quaternion.Angle(transform.rotation, Quaternion.LookRotation(windDirection, Vector3.up)) / 180;
+		float apparentWind = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(windDirection, Vector3.up));
+		float windAngle = 1 - apparentWind / 180;
 		float windForce = _pointsOfSail.Evaluate(windAngle) * _windField.GetSpeedAtPosition(transform.position) * _windMultiplier;
 
 		if (_sailState == SailState.Half) {
