@@ -988,24 +988,24 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1042083455}
     m_Modifications:
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 50.67
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -1.786197
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 18.13
+      value: 232.1
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1025,65 +1025,98 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_Name
-      value: Rounder
+      value: Lyon Blockaide
       objectReference: {fileID: 0}
     - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
-      value: 0.004649641
+      value: 0.103945084
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
-      value: 0.14005582
+      value: -0.0018620305
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
-      value: 0.017130094
+      value: 0.058327097
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
-      value: 0.017130094
+      value: 0.058327097
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
-      value: 0.38882577
+      value: 0.27979735
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
-      value: 0.32127377
+      value: 0.18105918
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
-      value: 1.2482862
+      value: 1.0911375
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
-      value: 1.2482862
+      value: 1.0911375
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
-      value: 0.9992676
+      value: 0.45163548
       objectReference: {fileID: 0}
     - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
         type: 2}
       propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
-      value: 0.6150818
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
@@ -1105,10 +1138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypoints:
-  - {x: 60, y: 0, z: 15}
-  - {x: 55, y: 0, z: 4}
-  - {x: 50, y: 0, z: 10}
-  - {x: 51, y: 0, z: 19}
+  - {x: 10, y: 0, z: 230}
+  - {x: 25, y: 0, z: 230}
+  - {x: 45, y: 0, z: 220}
+  - {x: 50, y: 0, z: 200}
+  - {x: 20, y: 0, z: 200}
+  - {x: 0, y: 0, z: 205}
+  - {x: -10, y: 0, z: 215}
+  - {x: 0, y: 0, z: 225}
 --- !u!114 &85119930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1159,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialState: {fileID: 85119929}
   _currentState: {fileID: 0}
+--- !u!4 &85119934 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 85119927}
 --- !u!1 &88411703
 GameObject:
   m_ObjectHideFlags: 1
@@ -4059,6 +4101,184 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 169830850}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &170447454
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 207.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 270.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: North Atlantic Patrol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &170447455 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 170447454}
+--- !u!1 &170447456 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 170447454}
+--- !u!114 &170447457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170447456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 170447458}
+  _currentState: {fileID: 0}
+--- !u!114 &170447458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170447456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 290, y: 0, z: 300}
+  - {x: 360, y: 0, z: 280}
+  - {x: 290, y: 0, z: 240}
+  - {x: 230, y: 0, z: 240}
+  - {x: 210, y: 0, z: 270}
 --- !u!1 &173980274
 GameObject:
   m_ObjectHideFlags: 0
@@ -9062,173 +9282,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 423849916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &424597733
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 50.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 16.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.6215352
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.7833863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_Name
-      value: Chaser
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
-      value: 0.004649641
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
-      value: 0.10779874
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
-      value: 0.05267044
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
-      value: 0.05267044
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
-      value: 0.5309156
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
-      value: 0.36250302
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
-      value: 1.6590805
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
-      value: 1.6590805
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
-      value: 0.9992676
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
-      value: 0.6150818
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 283.143
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &424597734 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
-    type: 2}
-  m_PrefabInternal: {fileID: 424597733}
---- !u!114 &424597735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424597734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bdb8c5ffec694a78a4673f6b7487f86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 328478973}
-  _boardingDistance: 6
---- !u!114 &424597736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424597734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waypoints:
-  - {x: 120, y: 0, z: -25}
-  - {x: 51, y: 0, z: 19}
---- !u!114 &424597737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424597734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialState: {fileID: 424597735}
-  _currentState: {fileID: 0}
---- !u!114 &424597738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424597734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inspectionSkill: 25
-  _bribeSkill: 25
 --- !u!1 &426554875
 GameObject:
   m_ObjectHideFlags: 0
@@ -11852,111 +11905,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516607798}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &518525682
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 49.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 15.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.82326925
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.56765115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_Name
-      value: Shooter
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
-      value: 0.004649641
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
-      value: 0.10779874
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
-      value: 0.05267044
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
-      value: 0.05267044
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
-      value: 0.5309156
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
-      value: 0.36250302
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
-      value: 1.6590805
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
-      value: 1.6590805
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
-      value: 0.9992676
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
-        type: 2}
-      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
-      value: 0.6150818
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &521574873
 GameObject:
   m_ObjectHideFlags: 0
@@ -14850,6 +14798,184 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 710301016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &711786912
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 79.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 158.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: Cape Blockaide
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &711786913 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 711786912}
+--- !u!1 &711786914 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 711786912}
+--- !u!114 &711786915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711786914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 711786916}
+  _currentState: {fileID: 0}
+--- !u!114 &711786916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711786914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 110, y: 0, z: 160}
+  - {x: 130, y: 0, z: 170}
+  - {x: 130, y: 0, z: 140}
+  - {x: 80, y: 0, z: 140}
+  - {x: 80, y: 0, z: 160}
 --- !u!1 &716601100
 GameObject:
   m_ObjectHideFlags: 0
@@ -21149,6 +21275,183 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949533746}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &949681965
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 198.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 317.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: Hamilton Blockade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &949681966 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 949681965}
+--- !u!1 &949681967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 949681965}
+--- !u!114 &949681968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 949681967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 949681969}
+  _currentState: {fileID: 0}
+--- !u!114 &949681969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 949681967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 250, y: 0, z: 350}
+  - {x: 270, y: 0, z: 310}
+  - {x: 200, y: 0, z: 290}
+  - {x: 200, y: 0, z: 320}
 --- !u!1 &952026329
 GameObject:
   m_ObjectHideFlags: 0
@@ -23388,6 +23691,43 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1061282881}
   m_Enabled: 1
+--- !u!1 &1042083454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1042083455}
+  m_Layer: 0
+  m_Name: Patrol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042083455
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042083454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 85119934}
+  - {fileID: 2079271761}
+  - {fileID: 711786913}
+  - {fileID: 1313824003}
+  - {fileID: 949681966}
+  - {fileID: 1616992018}
+  - {fileID: 1783749868}
+  - {fileID: 1163685653}
+  - {fileID: 170447455}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045470801
 GameObject:
   m_ObjectHideFlags: 0
@@ -25959,38 +26299,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134853196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1136708002 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
-    type: 2}
-  m_PrefabInternal: {fileID: 518525682}
---- !u!114 &1136708003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1136708002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialState: {fileID: 1136708004}
-  _currentState: {fileID: 0}
---- !u!114 &1136708004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1136708002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waypoints:
-  - {x: 120, y: 0, z: -25}
-  - {x: 51, y: 0, z: 19}
 --- !u!1 &1137219425
 GameObject:
   m_ObjectHideFlags: 0
@@ -27043,6 +27351,184 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1163462757}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1163685652
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 135.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 192.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: West Atlantic Patrol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1163685653 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163685652}
+--- !u!1 &1163685654 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163685652}
+--- !u!114 &1163685655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163685654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 1163685656}
+  _currentState: {fileID: 0}
+--- !u!114 &1163685656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163685654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 140, y: 0, z: 240}
+  - {x: 180, y: 0, z: 260}
+  - {x: 190, y: 0, z: 240}
+  - {x: 190, y: 0, z: 180}
+  - {x: 130, y: 0, z: 190}
 --- !u!1 &1164291041
 GameObject:
   m_ObjectHideFlags: 1
@@ -30605,6 +31091,183 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1306110205}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1313824002
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 102.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 246.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: Jameston Blockade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1313824003 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1313824002}
+--- !u!1 &1313824004 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1313824002}
+--- !u!114 &1313824005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313824004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 1313824006}
+  _currentState: {fileID: 0}
+--- !u!114 &1313824006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313824004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 110, y: 0, z: 290}
+  - {x: 130, y: 0, z: 290}
+  - {x: 130, y: 0, z: 230}
+  - {x: 100, y: 0, z: 250}
 --- !u!1 &1315924648
 GameObject:
   m_ObjectHideFlags: 0
@@ -33320,7 +33983,7 @@ Transform:
   - {fileID: 1200238742}
   - {fileID: 1188585508}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478003102
 GameObject:
@@ -36860,6 +37523,185 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616704393}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1616992017
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 281.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 376
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: North Blockade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1616992018 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1616992017}
+--- !u!1 &1616992019 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1616992017}
+--- !u!114 &1616992020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616992019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 1616992021}
+  _currentState: {fileID: 0}
+--- !u!114 &1616992021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616992019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 360, y: 0, z: 390}
+  - {x: 390, y: 0, z: 380}
+  - {x: 390, y: 0, z: 360}
+  - {x: 350, y: 0, z: 340}
+  - {x: 280, y: 0, z: 340}
+  - {x: 280, y: 0, z: 380}
 --- !u!1 &1617835922
 GameObject:
   m_ObjectHideFlags: 0
@@ -40876,6 +41718,183 @@ LODGroup:
     renderers:
     - renderer: {fileID: 57127612}
   m_Enabled: 1
+--- !u!1001 &1783749867
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 406.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 367.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: Oxford Blockade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1783749868 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783749867}
+--- !u!1 &1783749869 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783749867}
+--- !u!114 &1783749870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783749869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 1783749871}
+  _currentState: {fileID: 0}
+--- !u!114 &1783749871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783749869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 440, y: 0, z: 370}
+  - {x: 460, y: 0, z: 350}
+  - {x: 390, y: 0, z: 320}
+  - {x: 410, y: 0, z: 370}
 --- !u!1 &1790235973
 GameObject:
   m_ObjectHideFlags: 0
@@ -49039,6 +50058,186 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077121104}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2079271760
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1042083455}
+    m_Modifications:
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 202.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.82326925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.56765115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_Name
+      value: Gulf Patrol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].time
+      value: 0.103945084
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].value
+      value: -0.0018620305
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].inSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[0].outSlope
+      value: 0.058327097
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].time
+      value: 0.27979735
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].value
+      value: 0.18105918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].inSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[1].outSlope
+      value: 1.0911375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].time
+      value: 0.45163548
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].value
+      value: 0.38659263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].inSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[2].outSlope
+      value: 0.8474317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].time
+      value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _pointsOfSail.m_Curve.Array.data[3].value
+      value: 0.61087036
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560349279879502, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _windMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2079271761 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 2079271760}
+--- !u!1 &2079271762 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1952643403015838, guid: 97e6119257e944b798ce39bb643ee298,
+    type: 2}
+  m_PrefabInternal: {fileID: 2079271760}
+--- !u!114 &2079271763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079271762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdfc9c9f470340509d76938f37e684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 2079271764}
+  _currentState: {fileID: 0}
+--- !u!114 &2079271764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079271762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waypoints:
+  - {x: 10, y: 0, z: 210}
+  - {x: 30, y: 0, z: 210}
+  - {x: 60, y: 0, z: 190}
+  - {x: 70, y: 0, z: 170}
+  - {x: 30, y: 0, z: 150}
+  - {x: 0, y: 0, z: 150}
+  - {x: -14, y: 0, z: 200}
 --- !u!1 &2083620323
 GameObject:
   m_ObjectHideFlags: 0
