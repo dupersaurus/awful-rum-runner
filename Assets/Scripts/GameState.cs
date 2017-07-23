@@ -25,7 +25,7 @@ public class GameState : MonoBehaviour {
 	void Awake () {
 		_instance = this;
 
-		new WindField();
+		//new WindField();
 
 		_cargoManager = new CargoManager();
 		_timeManager = new TimeManager();

@@ -76,6 +76,10 @@ public class WindField : MonoBehaviour {
 			net += dir;
 		}
 
+		if (hits.Count == 0) {
+			return Quaternion.AngleAxis(180 + 135, Vector3.up) * Vector3.forward;
+		}
+
 		net /= hits.Count;
 
 		return net;
@@ -87,6 +91,6 @@ public class WindField : MonoBehaviour {
 	/// <param name="pos">The position to check at</param>
 	/// <returns>The speed of the wind</returns>
 	public int GetSpeedAtPosition(Vector2 pos) {
-		return 10;
+		return 20;
 	}
 }

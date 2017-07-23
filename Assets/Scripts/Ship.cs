@@ -134,9 +134,19 @@ public class Ship : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.tag == "Settlement" || collision.gameObject.tag == "Terrain") {
+			_velocity = Vector3.zero;
+			SetSailState(SailState.None);
+		}
+	}
+
 	private void UpdateFlag() {
 		Vector3 direction = WindField.instance.GetDirectionAtPosition(transform.position);
-		_flag.localRotation = Quaternion.LookRotation(-direction, Vector3.up) * Quaternion.Inverse(transform.rotation);
+
+		//if (direction != Vector3.zero) {
+			_flag.localRotation = Quaternion.LookRotation(-direction, Vector3.up) * Quaternion.Inverse(transform.rotation);
+		//}
 	}
 
 	public void SailUp() {
