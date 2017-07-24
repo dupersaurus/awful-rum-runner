@@ -5,10 +5,24 @@ using UnityEngine;
 
 public class PatrolState : AIState {
 
+	private const float SPOT_DISTANCE = 20;
+
 	[SerializeField]
 	protected List<Vector3> _waypoints;
 
 	private int _currentWaypointIndex = 0;
+
+	protected float spotDistance {
+		get { return 10 + SPOT_DISTANCE * GameState.time.lightLevel; }
+	}
+
+	void Update() {
+		if (Vector3.Distance(GameState.playerShip.position, _ship.position) <= spotDistance) {
+			Debug.Log(gameObject.name + " has spotted player");
+			var chase = _controller.ChangeToState<ChaseState>();
+			chase.target = GameState.playerShip;
+		}
+	}
 
 	void LateUpdate () {
 		Vector3 waypoint = _waypoints[_currentWaypointIndex];	
@@ -55,6 +69,9 @@ public class PatrolState : AIState {
 
 			lastPos = pos;
 		}
+
+		Gizmos.color = Color.white;
+		Gizmos.DrawWireSphere(transform.position, spotDistance);
 	}
 
 	/// <summary>
