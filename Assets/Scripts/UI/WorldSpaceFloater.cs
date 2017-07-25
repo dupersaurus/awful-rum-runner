@@ -35,10 +35,18 @@ namespace UI {
 			pos.y += _verticalOffset;
 			pos = Camera.main.WorldToViewportPoint(pos);
 
-			if (pos.x <= PADDING) {
-				pos.x = PADDING;
-			} else if (pos.x >= 1 - PADDING) {
-				pos.x = 1 - PADDING;
+			if (pos.z > 0) {
+				if (pos.x <= PADDING) {
+					pos.x = PADDING;
+				} else if (pos.x >= 1 - PADDING) {
+					pos.x = 1 - PADDING;
+				}
+			} else {
+				if (pos.x >= 0.5) {
+					pos.x = PADDING;
+				} else {
+					pos.x = 1 - PADDING;
+				}
 			}
 
 			_rect.anchorMin = pos;
