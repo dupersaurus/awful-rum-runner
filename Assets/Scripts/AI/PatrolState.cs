@@ -18,11 +18,7 @@ public class PatrolState : AIState {
 				_crew = GetComponent<Crew>();
 			}
 
-			try {
-				return _crew.baseSpottingSkill + _crew.spottingSkill * GameState.time.lightLevel; 
-			} catch {
-				return _crew.baseSpottingSkill + _crew.spottingSkill;
-			}
+			return _crew.GetSpotDistance();
 		}
 	}
 

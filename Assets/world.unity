@@ -7355,7 +7355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985e0b45b77e243168f56a855d5eb9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseSpottingSkill: 10
+  _baseSpottingSkill: 20
   _spottingSkill: 20
 --- !u!1 &329718377
 GameObject:

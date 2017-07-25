@@ -38,8 +38,10 @@ namespace UI {
 			if (pos.z > 0) {
 				if (pos.x <= PADDING) {
 					pos.x = PADDING;
+					pos.y = 0.6f;
 				} else if (pos.x >= 1 - PADDING) {
 					pos.x = 1 - PADDING;
+					pos.y = 0.6f;
 				}
 			} else {
 				if (pos.x >= 0.5) {
@@ -47,6 +49,8 @@ namespace UI {
 				} else {
 					pos.x = 1 - PADDING;
 				}
+					
+				pos.y = 0.6f;
 			}
 
 			_rect.anchorMin = pos;

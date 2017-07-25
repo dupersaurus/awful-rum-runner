@@ -14,6 +14,10 @@ namespace UI {
 
 		private WarehouseUI _warehouse;
 
+		public static int screenHeight {
+			get { return Screen.height; }
+		}
+
 		// Use this for initialization
 		void Awake () {
 			_instance = this;
@@ -93,6 +97,28 @@ namespace UI {
 			page.Begin(manager);
 
 			GameState.SetGlobalPause(page.name);
+		}
+
+		public static WorldSpaceFloater CreateEmptyFloater(Transform target) {
+			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
+			var icon = floaters.AddWorldFloater("Empty Floater", target);
+			icon.offset = 0.8f;
+			icon.gameObject.name = target.gameObject.name;
+
+			return icon;
+		}
+
+		public static RectTransform AddUIIcon(string type, RectTransform parent) {
+			GameObject go = Instantiate(Resources.Load("UI/" + type)) as GameObject;
+			RectTransform f = go.GetComponent<RectTransform>();
+
+			if (f) {
+				go.transform.SetParent(parent, false);
+				return f;
+			} else {
+				DestroyImmediate(go);
+				return null;
+			}
 		}
 
 		public static WorldSpaceFloater PlayerSpotted(Transform target) {

@@ -23,6 +23,12 @@ public class GameState : MonoBehaviour {
 		get { return _instance._settlements; }
 	}
 
+	private Ship[] _ais;
+
+	public static Ship[] ais {
+		get { return _instance._ais; }
+	}
+
 	public static bool globalPause {
 		get { return _instance._globalPause; }
 	}
@@ -39,6 +45,15 @@ public class GameState : MonoBehaviour {
 		_assets = new PlayerAssets();
 
 		_settlements = FindObjectsOfType<Settlement>();
+
+		var ais = FindObjectsOfType<AIController>();
+		var list = new List<Ship>();
+
+		foreach (var ai in ais) {
+			list.Add(ai.GetComponent<Ship>());
+		}
+
+		_ais = list.ToArray();
 	}
 	
 	// Update is called once per frame
@@ -93,5 +108,17 @@ public class GameState : MonoBehaviour {
 	private void ArrestShip(Ship ship) {
 		_assets.ModifyCash(-_assets.cash);
 		_cargo.ClearContents();
+	}
+
+	public static Ship[] GetShipsInRange(Vector3 pos, float range) {
+		var list = new List<Ship>();
+
+		foreach (var ship in _instance._ais) {
+			if ((ship.position - pos).magnitude <= range) {
+				list.Add(ship);
+			}
+		}
+
+		return list.ToArray();
 	}
 }

@@ -36,7 +36,8 @@ public class BoardingState : ChaseState {
 	protected override void TakeControl() {
 		if (BoardingManager.DemandBoarding(_ship, _target)) {
 			_timeOfDemand = Time.time;
-			_boardIcon = UI.UIMain.DemandBoarding(_ship.transform);
+			//_boardIcon = UI.UIMain.DemandBoarding(_ship.transform);
+			_controller.AddIcon("Submit Boarding Icon");
 		} else {
 			_controller.ChangeToState<ChaseState>();
 		}
@@ -44,7 +45,8 @@ public class BoardingState : ChaseState {
 
 	protected override void LoseControl() {
 		DestroyImmediate(_timeToBoardUI);
-		DestroyImmediate(_boardIcon);
+		//DestroyImmediate(_boardIcon);
+		_controller.RemoveIcon("Submit Boarding Icon");
 	}
 
 	protected override bool CheckForBoarding() {

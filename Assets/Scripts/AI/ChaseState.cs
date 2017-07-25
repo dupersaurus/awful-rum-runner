@@ -54,14 +54,16 @@ public class ChaseState : AIState {
 	/// Take over control of the AI
 	/// </summary>
 	protected override void TakeControl() {
-		_spotIcon = UI.UIMain.PlayerSpotted(_ship.transform);
+		//_spotIcon = UI.UIMain.PlayerSpotted(_ship.transform);
+		_controller.AddIcon("Spotted Icon");
 	}
 
 	/// <summary>
 	/// Called when control of AI is lost
 	/// </summary>
 	protected override void LoseControl() {
-		UI.UIMain.DestroyFloater(_spotIcon);
+		//UI.UIMain.DestroyFloater(_spotIcon);
+		_controller.RemoveIcon("Spotted Icon");
 	}
 
 	protected Vector3 GetHeadingToTarget() {
