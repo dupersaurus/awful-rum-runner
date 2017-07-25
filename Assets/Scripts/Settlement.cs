@@ -7,7 +7,9 @@ public enum Faction {
 	Pirate,
 	Islander,
 	Mainlander,
-	Empire
+	Empire,
+	Player,
+	Bootlegger
 }
 
 public class Settlement : MonoBehaviour {
@@ -56,5 +58,39 @@ public class Settlement : MonoBehaviour {
 	public bool CanDock(Ship ship) {
 		Vector3 shipPos = ship.transform.position - transform.position;
 		return _dockArea.Contains(shipPos);
+	}
+
+	/// <summary>
+	/// Whether the settlement is in view from a given point
+	/// </summary>
+	/// <param name="from">The point to be seen from</param>
+	/// <returns></returns>
+	public bool IsInView(Vector3 from, float viewDistance) {
+		Vector3 heading = transform.position - from;
+
+		if (heading.magnitude > viewDistance) {
+			return false;
+		}
+
+		RaycastHit hit;
+		Physics.Raycast(from, heading, out hit, viewDistance);
+
+		if (hit.collider != null && hit.collider.tag == "Terrain") {
+			return false;
+		}
+
+		return true;
+	}
+
+	public string flag {
+		get {
+			switch (_faction) {
+				default:
+				case Faction.Empire:		return "Empire Flag";
+				case Faction.Islander:		return "Islander Flag";
+				case Faction.Pirate:		return "Pirate Flag";
+				case Faction.Mainlander:	return "Mainland Flag";
+			}
+		}
 	}
 }

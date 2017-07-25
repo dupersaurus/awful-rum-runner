@@ -17,6 +17,12 @@ public class GameState : MonoBehaviour {
 	private bool _globalPause = false;
 	private string _pauseInitiator = null;
 
+	private Settlement[] _settlements;
+
+	public static Settlement[] settlements {
+		get { return _instance._settlements; }
+	}
+
 	public static bool globalPause {
 		get { return _instance._globalPause; }
 	}
@@ -31,6 +37,8 @@ public class GameState : MonoBehaviour {
 		_timeManager = new TimeManager();
 		_cargo = new CargoHold();
 		_assets = new PlayerAssets();
+
+		_settlements = FindObjectsOfType<Settlement>();
 	}
 	
 	// Update is called once per frame

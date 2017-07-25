@@ -119,6 +119,14 @@ namespace UI {
 			return icon as TimeToBoardFloater;
 		}
 
+		public static WorldSpaceFloater AddFlagIcon(Transform target, string flag) {
+			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
+			var icon = floaters.AddWorldFloater(flag, target);
+			icon.offset = 1.2f;
+
+			return icon;
+		}
+
 		public static void DestroyFloater(WorldSpaceFloater go) {
 			Destroy(go.gameObject);
 		}

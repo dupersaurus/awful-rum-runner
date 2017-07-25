@@ -1163,6 +1163,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -1220,6 +1225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &88411703
@@ -2947,7 +2954,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130904663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.181, y: -0.48, z: 3.238}
+  m_LocalPosition: {x: 1.181, y: -0.48, z: -0.73}
   m_LocalScale: {x: 0.29999998, y: 0.099999994, z: 0.7}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -4302,6 +4309,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -4356,6 +4368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &173980274
@@ -5875,7 +5889,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 252729496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.99}
+  m_LocalPosition: {x: 0, y: 0, z: -4.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1904041622}
@@ -7214,6 +7228,7 @@ GameObject:
   - component: {fileID: 328478973}
   - component: {fileID: 328478974}
   - component: {fileID: 328478975}
+  - component: {fileID: 328478976}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Ship
@@ -7268,6 +7283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5824a653302439bbd8fa5b6ef6af3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 0
   _flag: {fileID: 1490896215}
   _fullSail: {fileID: 1794944343}
   _halfSail: {fileID: 247111633}
@@ -7328,6 +7344,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09099d2ad3a744648991a1be2af5f83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &328478976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328478970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985e0b45b77e243168f56a855d5eb9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
 --- !u!1 &329718377
 GameObject:
   m_ObjectHideFlags: 0
@@ -8703,7 +8732,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403280988}
   m_LocalRotation: {x: -0, y: 0.2858879, z: -0, w: -0.9582631}
-  m_LocalPosition: {x: 1.36, y: 0, z: -2.35}
+  m_LocalPosition: {x: 2.22, y: 0, z: -3.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1069151214}
@@ -9482,7 +9511,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 426554875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.67, y: -0.38600004, z: 4.177}
+  m_LocalPosition: {x: -0.67, y: -0.38600004, z: 0.21}
   m_LocalScale: {x: 0.29999998, y: 0.5, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -15414,6 +15443,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -15468,6 +15502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &716601100
@@ -19982,7 +20018,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875239168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.361, y: -0.24, z: 3.623}
+  m_LocalPosition: {x: -0.361, y: -0.24, z: -0.35}
   m_LocalScale: {x: 0.3, y: 0.5, z: 0.3}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -21954,6 +21990,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -22007,6 +22048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &952026329
@@ -22034,7 +22077,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 952026329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.087, z: 4.68}
+  m_LocalPosition: {x: 0.01, y: 0.087, z: 0.71}
   m_LocalScale: {x: 0.7683375, y: 1, z: 0.43944836}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -22163,7 +22206,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958663881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.094421, y: 277.9969, z: -285.79803}
+  m_LocalPosition: {x: -21.094421, y: 277.9969, z: -282.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1209319188}
@@ -22193,7 +22236,7 @@ MonoBehaviour:
   _name: Santa Lucita
   _faction: 1
   _dockArea:
-    m_Center: {x: 1, y: 0, z: 2.5}
+    m_Center: {x: 0.5, y: 0, z: -1.5}
     m_Extent: {x: 3, y: 1, z: 2}
 --- !u!114 &958663884
 MonoBehaviour:
@@ -22229,7 +22272,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2, z: 2}
-  m_Center: {x: 0.4, y: 0, z: 3.5}
+  m_Center: {x: 0.4, y: 0, z: -0.6}
 --- !u!1 &960091376
 GameObject:
   m_ObjectHideFlags: 0
@@ -26856,7 +26899,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134853196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38, y: -0.468, z: 4.1}
+  m_LocalPosition: {x: 0.38, y: -0.468, z: 0.13}
   m_LocalScale: {x: 2.4836905, y: 0.20221585, z: 1.3581226}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -28104,6 +28147,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -28158,6 +28206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &1164291041
@@ -28607,7 +28657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188585507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.38, y: 277.9969, z: -134.06}
+  m_LocalPosition: {x: 25.38, y: 277.9969, z: -129.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1746758915}
@@ -28648,7 +28698,7 @@ MonoBehaviour:
   _name: Fort Cabana
   _faction: 2
   _dockArea:
-    m_Center: {x: 0.5, y: 0, z: 3}
+    m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 2}
 --- !u!65 &1188585511
 BoxCollider:
@@ -28661,7 +28711,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.7, y: 1, z: 3.1}
-  m_Center: {x: 0.4, y: 0, z: 4}
+  m_Center: {x: 0.4, y: 0, z: -0.5}
 --- !u!1 &1194878296
 GameObject:
   m_ObjectHideFlags: 0
@@ -28841,7 +28891,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1200238741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.5, y: 277.9969, z: -63}
+  m_LocalPosition: {x: -61.5, y: 277.9969, z: -64.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 252729497}
@@ -28882,7 +28932,7 @@ MonoBehaviour:
   _name: Lyons
   _faction: 2
   _dockArea:
-    m_Center: {x: 0.5, y: 0, z: -2}
+    m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 3}
 --- !u!65 &1200238745
 BoxCollider:
@@ -29085,7 +29135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1209319187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.48, z: 2.997}
+  m_LocalPosition: {x: 0, y: -0.48, z: -0.97}
   m_LocalScale: {x: 0.3, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -30605,7 +30655,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253740717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.12, y: -0.38600004, z: 4.17}
+  m_LocalPosition: {x: 1.12, y: -0.38600004, z: 0.2}
   m_LocalScale: {x: 0.29999998, y: 0.5, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -31887,6 +31937,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -31940,6 +31995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &1315924648
@@ -34685,7 +34742,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478003102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -0.24, z: 3.63}
+  m_LocalPosition: {x: 0.46, y: -0.24, z: -0.34}
   m_LocalScale: {x: 0.29999998, y: 0.5, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -35006,7 +35063,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1497638665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 244.6, y: 277.9969, z: -308}
+  m_LocalPosition: {x: 244.6, y: 277.9969, z: -306.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1706796451}
@@ -35050,8 +35107,8 @@ MonoBehaviour:
   _name: Scaramouche
   _faction: 0
   _dockArea:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 2.5, y: 1, z: 1.5}
+    m_Center: {x: 0.25, y: 0, z: 0}
+    m_Extent: {x: 2.5, y: 1, z: 3}
 --- !u!1 &1500183014
 GameObject:
   m_ObjectHideFlags: 1
@@ -35667,7 +35724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1526686110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.91, y: -0.38600004, z: 4.56}
+  m_LocalPosition: {x: 0.91, y: -0.38600004, z: 0.59}
   m_LocalScale: {x: 0.29999998, y: 0.5, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -36621,7 +36678,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1551047636}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.42, y: -0.38600004, z: 3.8}
+  m_LocalPosition: {x: 1.42, y: -0.38600004, z: -0.17}
   m_LocalScale: {x: 0.29999998, y: 0.5, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 958663882}
@@ -38351,6 +38408,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -38406,6 +38468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &1617835922
@@ -38747,7 +38811,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1646695778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.4, y: 277.9969, z: -319.8}
+  m_LocalPosition: {x: 104.4, y: 277.9969, z: -315.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1909085084}
@@ -38791,8 +38855,8 @@ MonoBehaviour:
   _name: Porto Agave
   _faction: 1
   _dockArea:
-    m_Center: {x: 0, y: 0, z: 7}
-    m_Extent: {x: 2, y: 1, z: 2}
+    m_Center: {x: -0.3, y: 0, z: 2}
+    m_Extent: {x: 3, y: 1, z: 2}
 --- !u!1 &1647580755
 GameObject:
   m_ObjectHideFlags: 0
@@ -40808,7 +40872,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706796450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 338106224}
@@ -41686,7 +41750,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746758914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2088460642}
@@ -42650,6 +42714,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -42703,6 +42772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &1790235973
@@ -45078,7 +45149,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1876971001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 161.9, y: 277.9969, z: 74.4}
+  m_LocalPosition: {x: 160.88, y: 277.9969, z: 75.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403280989}
@@ -45119,7 +45190,7 @@ MonoBehaviour:
   _name: Hamilton
   _faction: 2
   _dockArea:
-    m_Center: {x: 0, y: 0, z: 0}
+    m_Center: {x: 1, y: 0, z: -0.5}
     m_Extent: {x: 4, y: 1, z: 3}
 --- !u!1 &1877375066
 GameObject:
@@ -46347,7 +46418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909085083}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 9.84}
+  m_LocalPosition: {x: 0, y: 0, z: 5.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 36260210}
@@ -51062,6 +51133,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 114817632497276596, guid: 97e6119257e944b798ce39bb643ee298,
+        type: 2}
+      propertyPath: _faction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
   m_IsPrefabParent: 0
@@ -51116,6 +51192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90575ffee7ff41b593ab1c22c0df23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseSpottingSkill: 10
+  _spottingSkill: 20
   _inspectionSkill: 25
   _bribeSkill: 25
 --- !u!1 &2083620323
