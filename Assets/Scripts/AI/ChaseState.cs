@@ -18,11 +18,13 @@ public class ChaseState : AIState {
 	}
 
 	[SerializeField]
-	private float _boardingDistance = 3;
+	private float _boardingDistance = 7;
 
 	public float boardingDistance {
 		get { return _boardingDistance; }
 	}
+
+	private UI.WorldSpaceFloater _spotIcon;
 	
 	// Update is called once per frame
 	protected void Update () {
@@ -52,14 +54,14 @@ public class ChaseState : AIState {
 	/// Take over control of the AI
 	/// </summary>
 	protected override void TakeControl() {
-
+		_spotIcon = UI.UIMain.PlayerSpotted(_ship.transform);
 	}
 
 	/// <summary>
 	/// Called when control of AI is lost
 	/// </summary>
 	protected override void LoseControl() {
-
+		UI.UIMain.DestroyFloater(_spotIcon);
 	}
 
 	protected Vector3 GetHeadingToTarget() {

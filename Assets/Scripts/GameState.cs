@@ -53,7 +53,9 @@ public class GameState : MonoBehaviour {
 	}
 
 	public static TimeManager time {
-		get { return _instance._timeManager; }
+		get { 
+			return _instance._timeManager; 
+		}
 	}
 
 	public static Ship playerShip {

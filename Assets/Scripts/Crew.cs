@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Crew : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	[SerializeField]
+	private int _baseSpottingSkill = 10;
+
+	public int baseSpottingSkill {
+		get { return _baseSpottingSkill; }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	[SerializeField]
+	private int _spottingSkill = 20;
+
+	public int spottingSkill {
+		get { return _spottingSkill; }
 	}
 }

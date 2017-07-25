@@ -5,15 +5,25 @@ using UnityEngine;
 
 public class PatrolState : AIState {
 
-	private const float SPOT_DISTANCE = 20;
-
 	[SerializeField]
 	protected List<Vector3> _waypoints;
 
 	private int _currentWaypointIndex = 0;
 
+	private Crew _crew;
+
 	protected float spotDistance {
-		get { return 10 + SPOT_DISTANCE * GameState.time.lightLevel; }
+		get { 
+			if (_crew == null) {
+				_crew = GetComponent<Crew>();
+			}
+
+			try {
+				return _crew.baseSpottingSkill + _crew.spottingSkill * GameState.time.lightLevel; 
+			} catch {
+				return _crew.baseSpottingSkill + _crew.spottingSkill;
+			}
+		}
 	}
 
 	void Update() {

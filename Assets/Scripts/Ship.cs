@@ -9,6 +9,13 @@ public class Ship : MonoBehaviour {
 	private SailModel _sails;
 
 	[SerializeField]
+	private Faction _faction;
+
+	public Faction faction {
+		get { return _faction; }
+	}
+
+	[SerializeField]
 	private Transform _flag;
 
 	[SerializeField]

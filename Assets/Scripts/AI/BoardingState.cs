@@ -13,7 +13,7 @@ public class BoardingState : ChaseState {
 	/// Distance from target to begin boarding
 	/// </summary>
 	[SerializeField]
-	private float _boardRadius = 2.5f;
+	private float _boardRadius = 5f;
 
 	public float boardRadius {
 		get { return _boardRadius; }
@@ -23,7 +23,7 @@ public class BoardingState : ChaseState {
 	/// Amount of consecutive time spent in boarding radius to start boarding
 	/// </summary>
 	[SerializeField]
-	private float _requiredBoardTime = 3;
+	private float _requiredBoardTime = 6;
 
 	/// <summary>
 	/// Consecutive time spent in board radius

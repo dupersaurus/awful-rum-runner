@@ -95,6 +95,14 @@ namespace UI {
 			GameState.SetGlobalPause(page.name);
 		}
 
+		public static WorldSpaceFloater PlayerSpotted(Transform target) {
+			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
+			var icon = floaters.AddWorldFloater("Spotted Icon", target);
+			icon.offset = 0.8f;
+
+			return icon;
+		}
+
 		public static WorldSpaceFloater DemandBoarding(Transform target) {
 			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
 			var icon = floaters.AddWorldFloater("Submit Boarding Icon", target);
@@ -109,6 +117,10 @@ namespace UI {
 			icon.offset = 0.8f;
 
 			return icon as TimeToBoardFloater;
+		}
+
+		public static void DestroyFloater(WorldSpaceFloater go) {
+			Destroy(go.gameObject);
 		}
 	}
 }
