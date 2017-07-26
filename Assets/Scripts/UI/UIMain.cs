@@ -7,6 +7,7 @@ namespace UI {
 		private static UIMain _instance;
 
 		private Page _activePage = null;
+		private Page _hudPage = null;
 
 		public static bool hasFocus {
 			get { return _instance._activePage != null; }
@@ -43,7 +44,9 @@ namespace UI {
 				_activePage.Hide();
 				GameState.ReleaseGlobalPause(_activePage.name);
 				
-				Destroy(_activePage);
+				if (_activePage != _hudPage) {
+					Destroy(_activePage.gameObject);
+				}
 			}
 			_activePage = null;
 		}
@@ -66,7 +69,12 @@ namespace UI {
 		}
 
 		protected void OpenHUD() {
-			_instance.OpenScreen("HUD");
+			if (_hudPage == null) {
+				_hudPage = _instance.OpenScreen("HUD");
+			} else {
+				_hudPage.gameObject.SetActive(true);
+				_activePage = _hudPage;
+			}
 		}
 
 		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
@@ -100,9 +108,13 @@ namespace UI {
 		}
 
 		public static WorldSpaceFloater CreateEmptyFloater(Transform target) {
+			return CreateEmptyFloater(target, 0.8f);
+		}
+
+		public static WorldSpaceFloater CreateEmptyFloater(Transform target, float offset) {
 			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
 			var icon = floaters.AddWorldFloater("Empty Floater", target);
-			icon.offset = 0.8f;
+			icon.offset = offset;
 			icon.gameObject.name = target.gameObject.name;
 
 			return icon;

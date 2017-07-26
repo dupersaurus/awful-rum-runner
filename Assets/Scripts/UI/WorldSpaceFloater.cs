@@ -17,6 +17,8 @@ namespace UI {
 
 		protected float _verticalOffset = 0;
 
+		private Dictionary<string, RectTransform> _icon = new Dictionary<string, RectTransform>();
+
 		public Transform track {
 			set { _track = value; }
 		}
@@ -31,7 +33,14 @@ namespace UI {
 
 		// Update is called once per frame
 		void Update () {
-			var pos = _track.position;
+			Vector3 pos = Vector3.zero;
+
+			try {
+				pos = _track.position;
+			} catch {
+				Debug.Log("UHOH");
+			}
+
 			pos.y += _verticalOffset;
 			pos = Camera.main.WorldToViewportPoint(pos);
 
@@ -55,6 +64,53 @@ namespace UI {
 
 			_rect.anchorMin = pos;
 			_rect.anchorMax = pos;
+		}
+
+		public RectTransform AddIcon(string type) {
+			if (_icon.ContainsKey(type)) {
+				return null;
+			}
+
+			RectTransform icon = UI.UIMain.AddUIIcon(type, GetComponent<RectTransform>());
+			_icon.Add(type, icon);
+
+			PositionIcons();
+
+			return icon;
+		}
+
+		public void RemoveIcon(string type) {
+			if (!_icon.ContainsKey(type)) {
+				return;
+			}
+
+			Destroy(_icon[type].gameObject);
+			_icon.Remove(type);
+
+			PositionIcons();
+		}
+
+		public RectTransform ToggleIcon(string type, bool show) {
+			if (show) {
+				return AddIcon(type);
+			} else {
+				RemoveIcon(type);
+			}
+
+			return null;
+		}
+
+		private void PositionIcons() {
+			float height = 42;
+			float x = 0;
+			float y = 0;
+
+			foreach (var icon in _icon) {
+				var pos = new Vector3(x, y, 0);
+				icon.Value.localPosition = pos;
+
+				y += height;
+			}
 		}
 	}
 }

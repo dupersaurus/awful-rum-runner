@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224635389941032214}
   - component: {fileID: 222263650119752032}
-  - component: {fileID: 114450218162317700}
   m_Layer: 5
   m_Name: Pirate Flag
   m_TagString: Untagged
@@ -95,17 +94,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u2620"
---- !u!114 &114450218162317700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704380752670420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6794123ee971a4f359ece0f3b66cdd37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114645019429755634
 MonoBehaviour:
   m_ObjectHideFlags: 1
