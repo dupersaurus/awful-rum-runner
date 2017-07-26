@@ -19,12 +19,6 @@ public class Crew : MonoBehaviour {
 	}
 
 	public float GetSpotDistance() {
-		float lightLevel = 0;
-
-		if (GameState.time != null) {
-			lightLevel = GameState.time.lightLevel;
-		}
-
-		return baseSpottingSkill + spottingSkill * lightLevel;
+		return baseSpottingSkill + spottingSkill * GameState.lightLevel;
 	}
 }

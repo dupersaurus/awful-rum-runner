@@ -133,36 +133,12 @@ namespace UI {
 			}
 		}
 
-		public static WorldSpaceFloater PlayerSpotted(Transform target) {
-			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
-			var icon = floaters.AddWorldFloater("Spotted Icon", target);
-			icon.offset = 0.8f;
-
-			return icon;
-		}
-
-		public static WorldSpaceFloater DemandBoarding(Transform target) {
-			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
-			var icon = floaters.AddWorldFloater("Submit Boarding Icon", target);
-			icon.offset = 0.8f;
-
-			return icon;
-		}
-
 		public static TimeToBoardFloater AddTimeToBoard(Transform target) {
 			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
 			var icon = floaters.AddWorldFloater("Time To Board", target);
-			icon.offset = 0.8f;
+			icon.offset = -0.2f;
 
 			return icon as TimeToBoardFloater;
-		}
-
-		public static WorldSpaceFloater AddFlagIcon(Transform target, string flag) {
-			var floaters = _instance.GetComponentInChildren<FloatingIcons>();
-			var icon = floaters.AddWorldFloater(flag, target);
-			icon.offset = 1.2f;
-
-			return icon;
 		}
 
 		public static void DestroyFloater(WorldSpaceFloater go) {

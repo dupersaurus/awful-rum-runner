@@ -77,7 +77,8 @@ public class BoardingManager {
 	/// Ends the current boarding action
 	/// </summary>
 	public static void EndBoardingAction() {
-
+		_actor = null;
+		_target = null;
 	}
 
 	/// <summary>

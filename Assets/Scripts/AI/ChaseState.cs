@@ -40,7 +40,13 @@ public class ChaseState : AIState {
 	protected virtual bool CheckForBoarding() {
 		Vector3 heading = GetHeadingToTarget();
 
-		if (heading.sqrMagnitude <= _boardingDistance * _boardingDistance) {
+		// Check if lost sight
+		if (heading.magnitude > GetComponent<Crew>().GetSpotDistance()) {
+			GiveUpChase();
+		}
+
+		// Check for boarding distance
+		else if (heading.sqrMagnitude <= _boardingDistance * _boardingDistance) {
 			if (BoardingManager.CanDemandBoarding(_ship, _target)) {
 				BoardingState boarding = _controller.ChangeToState<BoardingState>();
 				boarding.target = _target;
@@ -68,5 +74,9 @@ public class ChaseState : AIState {
 
 	protected Vector3 GetHeadingToTarget() {
 		return _target.position - _ship.position;
+	}
+
+	private void GiveUpChase() {
+		_controller.ChangeToState<PatrolState>();
 	}
 }

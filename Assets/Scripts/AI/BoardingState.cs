@@ -25,10 +25,13 @@ public class BoardingState : ChaseState {
 	[SerializeField]
 	private float _requiredBoardTime = 6;
 
+	[SerializeField]
+	private float _baseBoardTime = 1;
+
 	/// <summary>
 	/// Consecutive time spent in board radius
 	/// </summary>
-	private float _boardTime = 0;
+	private float _boardTime = 1;
 
 	private UI.WorldSpaceFloater _boardIcon;
 	private UI.TimeToBoardFloater _timeToBoardUI;
@@ -36,7 +39,7 @@ public class BoardingState : ChaseState {
 	protected override void TakeControl() {
 		if (BoardingManager.DemandBoarding(_ship, _target)) {
 			_timeOfDemand = Time.time;
-			//_boardIcon = UI.UIMain.DemandBoarding(_ship.transform);
+			_boardTime = _baseBoardTime;
 			_controller.AddIcon("Submit Boarding Icon");
 		} else {
 			_controller.ChangeToState<ChaseState>();
@@ -44,20 +47,23 @@ public class BoardingState : ChaseState {
 	}
 
 	protected override void LoseControl() {
-		DestroyImmediate(_timeToBoardUI);
-		//DestroyImmediate(_boardIcon);
+		if (_timeToBoardUI != null) {
+			DestroyImmediate(_timeToBoardUI.gameObject);
+			_timeToBoardUI = null;
+		}
+
 		_controller.RemoveIcon("Submit Boarding Icon");
 	}
 
 	protected override bool CheckForBoarding() {
 		Vector3 heading = GetHeadingToTarget();
 
-		if (heading.magnitude <= _boardRadius) {
+		if (_boardTime >= 0) {
 			if (_timeToBoardUI == null) {
 				_timeToBoardUI = UI.UIMain.AddTimeToBoard(_ship.transform);
 			}
 
-			_boardTime += Time.deltaTime;
+			_boardTime += GetProgressIncrement() * Time.deltaTime;
 			_timeToBoardUI.progress = _boardTime / _requiredBoardTime;
 
 			if (_boardTime >= _requiredBoardTime) {
@@ -66,9 +72,47 @@ public class BoardingState : ChaseState {
 				return true;
 			}
 		} else {
-			_boardTime = 0;
+			GiveUpChase();
 		}
 
 		return false;
+	}
+
+	/// <summary>
+	/// Get the amount of increment boarding progress time by. 
+	/// Is a function of distance and other stuff.
+	/// </summary>
+	/// <returns></returns>
+	private float GetProgressIncrement() {
+		float distance = GetHeadingToTarget().magnitude;
+
+		// If lost sight, decrease by a bunch
+		if (distance > GetComponent<Crew>().GetSpotDistance()) {
+			return -1f;
+		}
+
+		// If out of boarding range, decrease by a bit
+		else if (distance > _boardRadius) {
+			return -0.25f;
+		}
+
+		// Close by and not running away
+		else if (_target.velocity.magnitude <= 0.01f && distance < 1) {
+			return 10000;
+		}
+
+		else {
+			if (distance < 1) {
+				distance = 1;
+			}
+
+			return Mathf.Clamp01((_boardRadius - distance) / _boardRadius + 0.1f);
+		}
+	}
+
+	private void GiveUpChase() {
+		BoardingManager.EndBoardingAction();
+		ChaseState chase = _controller.ChangeToState<ChaseState>();
+		chase.target = _target;
 	}
 }

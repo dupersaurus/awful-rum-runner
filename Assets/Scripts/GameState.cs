@@ -81,6 +81,16 @@ public class GameState : MonoBehaviour {
 		}
 	}
 
+	public static float lightLevel {
+		get {
+			if (_instance != null && _instance._timeManager != null) {
+				return _instance._timeManager.lightLevel;
+			} else {
+				return FindObjectOfType<DayAndNightControl>().lightLevel;
+			}
+		}
+	}
+
 	public static Ship playerShip {
 		get { return _instance._playerShip; }
 	}
