@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour, IController {
 
+	private bool _initialized = false;
+
 	[SerializeField]
 	private AIState _initialState;
 
@@ -16,19 +18,24 @@ public class AIController : MonoBehaviour, IController {
 
 	private Dictionary<string, RectTransform> _upperIcons = new Dictionary<string, RectTransform>();
 
-	void Start() {
-		_shipUI = UI.UIMain.CreateEmptyFloater(transform);
-
-		if (_initialState) {
-			ActivateState(_initialState);
-		}
+	void Awake() {
+		ChangeToState<WaitState>();
 	}
 
 	void Update() {
+		if (!_initialized) {
+			return;
+		}
+
 		if (_initNewState) {
 			_currentState.Enable();
 			_initNewState = false;
 		}
+	}
+
+	public void Initialize() {
+		_shipUI = UI.UIMain.CreateEmptyFloater(transform);
+		_initialized = true;
 	}
 
 	public T ChangeToState<T>() where T : AIState {

@@ -5,6 +5,8 @@ using UI;
 
 public class PlayerController : MonoBehaviour, IController {
 
+	private bool _initialized = false;
+
 	private Ship _ship = null;
 
 	private UI.WorldSpaceFloater _settlementActionsUI;
@@ -13,14 +15,10 @@ public class PlayerController : MonoBehaviour, IController {
 	void Awake () {
 		_ship = GetComponent<Ship>();
 	}
-
-	void Start() {
-		_settlementActionsUI = UI.UIMain.CreateEmptyFloater(transform, -0.15f);
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameState.globalPause) {
+		if (GameState.globalPause || !_initialized) {
 			return;
 		}
 
@@ -41,6 +39,11 @@ public class PlayerController : MonoBehaviour, IController {
 		} else if (Input.GetButtonDown("Sail Down")) {
 			_ship.SailDown();
 		}
+	}
+
+	public void Initialize() {
+		_settlementActionsUI = UI.UIMain.CreateEmptyFloater(transform, -0.15f);
+		_initialized = true;
 	}
 
 	private bool OpenWarehouse() {

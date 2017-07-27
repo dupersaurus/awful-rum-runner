@@ -7,6 +7,11 @@ public class DayAndNightControl : MonoBehaviour {
 	Mesh mesh;
 	public GameObject StarDome;
 	public int currentDay = 0; //day 8287... still stuck in this grass prison... no esacape... no freedom...
+
+	public int day {
+		set { currentDay = value; }
+	}
+
 	public string DayState;
 	public Light directionalLight; //the directional light in the scene we're going to work with
 	public float SecondsInAFullDay = 120f; //in realtime, this is about two minutes by default. (every 1 minute/60 seconds is day in game)

@@ -95,6 +95,22 @@ public class GameState : MonoBehaviour {
 		get { return _instance._playerShip; }
 	}
 
+	public static void StartGame() {
+		var ais = FindObjectsOfType<AIController>();
+
+		foreach (var ai in ais) {
+			ai.Initialize();
+		}
+
+		foreach (var settlement in _instance._settlements) {
+			settlement.Initialize();
+		}
+
+		FindObjectOfType<DayAndNightControl>().day = 1;
+		FindObjectOfType<FollowCamera>().enabled = true;
+		FindObjectOfType<PlayerController>().Initialize();
+	}
+
 	public static void SetGlobalPause(string id) {
 		if (_instance._pauseInitiator != null) {
 			return;

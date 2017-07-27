@@ -27,6 +27,8 @@ public class FactionFlags {
 
 public class Settlement : MonoBehaviour {
 
+	private bool _initialized = false;
+
 	/// <summary>
 	/// Name of the settlement
 	/// </summary>
@@ -54,22 +56,20 @@ public class Settlement : MonoBehaviour {
 	void Awake () {
 		_warehouse = GetComponent<Warehouse>();
 	}
-
-	void Start() {
-		_uiIcon = UI.UIMain.CreateEmptyFloater(transform);
-		UI.UIMain.AddUIIcon(flag, _uiIcon.GetComponent<RectTransform>());
-
-		HideFlag();
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireCube(transform.position + _dockArea.center, _dockArea.size);
+	}
+
+	public void Initialize() {
+		_initialized = true;
+
+		_uiIcon = UI.UIMain.CreateEmptyFloater(transform);
+		UI.UIMain.AddUIIcon(flag, _uiIcon.GetComponent<RectTransform>());
+
+		HideFlag();
 	}
 
 	/// <summary>
@@ -105,11 +105,15 @@ public class Settlement : MonoBehaviour {
 	}
 
 	public void ShowFlag() {
-		_uiIcon.gameObject.SetActive(true);
+		if (_initialized) {
+			_uiIcon.gameObject.SetActive(true);
+		}
 	}
 
 	public void HideFlag() {
-		_uiIcon.gameObject.SetActive(false);
+		if (_initialized) {
+			_uiIcon.gameObject.SetActive(false);
+		}
 	}
 
 	public string flag {

@@ -22,16 +22,9 @@ namespace UI {
 		// Use this for initialization
 		void Awake () {
 			_instance = this;
-			//_warehouse = GetComponentInChildren<WarehouseUI>();
-
-			//_warehouse.ui = this;
-
-			OpenHUD();
-		}
-		
-		// Update is called once per frame
-		void Update () {
 			
+			//OpenHUD();
+			OpenScreen("Splash Screen");
 		}
 
 		public void Close() {
