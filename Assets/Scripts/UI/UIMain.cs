@@ -78,7 +78,10 @@ namespace UI {
 		}
 
 		public static void OpenBank(SettlementService.Bank bank) {
-			
+			BankUI page = _instance.OpenScreen("Bank Screen") as BankUI;
+			page.Show(bank, GameState.assets);
+
+			GameState.SetGlobalPause(page.name);
 		}
 
 		public static void OpenBoardingAction() {
