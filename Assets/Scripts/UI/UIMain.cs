@@ -77,6 +77,10 @@ namespace UI {
 			GameState.SetGlobalPause(page.name);
 		}
 
+		public static void OpenBank(SettlementService.Bank bank) {
+			
+		}
+
 		public static void OpenBoardingAction() {
 			BoardingUI page = _instance.OpenScreen("Boarding Action") as BoardingUI;
 			page.Begin();

@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour, IController {
 			if (OpenWarehouse()) {
 				return;
 			}
+		} 
+		
+		if (Input.GetButtonDown("Open Bank")) {
+			if (OpenBank()) {
+				return;
+			}
 		}
 
 		// Movement
@@ -43,6 +49,7 @@ public class PlayerController : MonoBehaviour, IController {
 
 	public void Initialize() {
 		_settlementActionsUI = UI.UIMain.CreateEmptyFloater(transform, -0.15f);
+		_settlementActionsUI.drawIconsVertical = false;
 		_initialized = true;
 	}
 
@@ -56,7 +63,18 @@ public class PlayerController : MonoBehaviour, IController {
 		return false;
 	}
 
+	private bool OpenBank() {
+		if (_ship.currentSettlement != null && _ship.currentSettlement.bank != null) {
+			_ship.SetSailState(SailState.None);
+			UIMain.OpenBank(_ship.currentSettlement.bank);
+			return true;
+		}
+
+		return false;
+	}
+
 	private void UpdateSettlementIcons() {
+		// Warehouse
 		var icon = _settlementActionsUI.ToggleIcon("Warehouse Icon", _ship.currentSettlement != null && _ship.currentSettlement.warehouse != null);
 
 		if (icon != null) {
@@ -68,9 +86,26 @@ public class PlayerController : MonoBehaviour, IController {
 
 			button.onClick.AddListener(ClickOpenWarehouse);
 		}
+
+		// Bank
+		icon = _settlementActionsUI.ToggleIcon("Bank Icon", _ship.currentSettlement != null && _ship.currentSettlement.bank != null);
+
+		if (icon != null) {
+			var button = icon.GetComponent<UnityEngine.UI.Button>();
+
+			if (button == null) {
+				button = icon.gameObject.AddComponent<UnityEngine.UI.Button>();
+			}
+
+			button.onClick.AddListener(ClickOpenBank);
+		}
 	}
 
 	public void ClickOpenWarehouse() {
 		OpenWarehouse();
+	}
+
+	public void ClickOpenBank() {
+		OpenBank();
 	}
 }

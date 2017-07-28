@@ -10,7 +10,7 @@ namespace SettlementService {
 		public int count;
 	}
 
-	public class Warehouse : MonoBehaviour {
+	public class Warehouse : MonoBehaviour, ISettlementService {
 
 		/// <summary>
 		/// List of cargos the settlement wants, with a scalar representing the price markup
@@ -44,13 +44,8 @@ namespace SettlementService {
 		}
 
 		// Use this for initialization
-		void Start () {
-			
-		}
-		
-		// Update is called once per frame
-		void Update () {
-			
+		public void Initialize() {
+
 		}
 
 		/// <summary>

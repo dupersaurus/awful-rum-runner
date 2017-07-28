@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TimeManager {
 
+	public delegate void OnNewDay(int day);
+
+	public event OnNewDay newDay;
+
 	private const int DAY = 86400;
 
 	private const int HOUR = 3600;
@@ -49,14 +53,12 @@ public class TimeManager {
 
 	// Update is called once per frame
 	public void Update (float delta) {
-		_dayNightController.CallUpdate(delta);
-
-		/*_currentTime += delta * _timeScale;
-
-		if (_currentTime >= DAY) {
-			_currentDay++;
-			_currentTime -= DAY;
-		}*/
+		if (_dayNightController.CallUpdate(delta)) {
+			// New day
+			if (newDay != null) {
+				newDay(_dayNightController.currentDay);
+			}
+		}
 	}
 
 	public void AddDays(int days) {

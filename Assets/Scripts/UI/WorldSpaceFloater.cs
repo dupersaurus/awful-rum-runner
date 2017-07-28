@@ -19,6 +19,12 @@ namespace UI {
 
 		private Dictionary<string, RectTransform> _icon = new Dictionary<string, RectTransform>();
 
+		private bool _drawIconsVertical = true;
+
+		public bool drawIconsVertical {
+			set { _drawIconsVertical = value; }
+		}
+
 		public Transform track {
 			set { _track = value; }
 		}
@@ -105,11 +111,19 @@ namespace UI {
 			float x = 0;
 			float y = 0;
 
+			if (!_drawIconsVertical) {
+				x = ((_icon.Count - 1) * height) / -2;
+			}
+
 			foreach (var icon in _icon) {
 				var pos = new Vector3(x, y, 0);
 				icon.Value.localPosition = pos;
 
-				y += height;
+				if (_drawIconsVertical) {
+					y += height;
+				} else {
+					x += height;
+				}
 			}
 		}
 	}

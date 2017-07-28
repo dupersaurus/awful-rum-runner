@@ -109,6 +109,8 @@ public class GameState : MonoBehaviour {
 		FindObjectOfType<DayAndNightControl>().day = 1;
 		FindObjectOfType<FollowCamera>().enabled = true;
 		FindObjectOfType<PlayerController>().Initialize();
+
+		assets.Initialize(time);
 	}
 
 	public static void SetGlobalPause(string id) {

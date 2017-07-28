@@ -50,11 +50,18 @@ public class Settlement : MonoBehaviour {
 		get { return _warehouse; }
 	}
 
+	private Bank _bank;
+
+	public Bank bank {
+		get { return _bank; }
+	}
+
 	private UI.WorldSpaceFloater _uiIcon;
 
 	// Use this for initialization
 	void Awake () {
 		_warehouse = GetComponent<Warehouse>();
+		_bank = GetComponent<Bank>();
 	}
 	
 
@@ -70,6 +77,12 @@ public class Settlement : MonoBehaviour {
 		UI.UIMain.AddUIIcon(flag, _uiIcon.GetComponent<RectTransform>());
 
 		HideFlag();
+
+		var services = GetComponents<ISettlementService>();
+
+		foreach (var service in services) {
+			service.Initialize();
+		}
 	}
 
 	/// <summary>
