@@ -35,19 +35,41 @@ namespace UI {
 		}
 
 		public void Withdraw() {
+			int amt = int.Parse(_withdrawInput.text);
+			_bank.Withdraw(amt);
 
+			UpdateDisplay();
+
+			_withdrawInput.text = "";
 		}	
 
 		public void Deposit() {
+			int amt = int.Parse(_depositInput.text);
+			_bank.Deposit(amt);
 
+			UpdateDisplay();
+
+			_depositInput.text = "";
 		}
 
 		public void PayLoan(int id) {
+			var loans = _bank.GetLoans();
 
+			if (id < 0 || id >= loans.Count) {
+				return;
+			}
+
+			_bank.PayLoan(loans[id], int.Parse(_payLoanInput.text));
+			_payLoanInput.text = "";
+
+			UpdateDisplay();
 		}
 
 		public void TakeLoan() {
+			_bank.TakeLoan(int.Parse(_newLoanAmountInput.text));
+			_newLoanAmountInput.text = "";
 
+			UpdateDisplay();
 		}
 
 		private void UpdateDisplay() {

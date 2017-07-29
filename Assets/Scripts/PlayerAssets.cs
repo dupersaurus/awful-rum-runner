@@ -103,6 +103,15 @@ public class PlayerAssets {
 		}
 	}
 
+	/// <summary>
+	/// Deposit into bank without taking from cash
+	/// </summary>
+	/// <param name="name"></param>
+	/// <param name="amount"></param>
+	public void CreditDeposit(string name, int amount) {
+		SetDeposit(name, amount + GetDeposit(name));
+	}
+
 	public void Deposit(string name, int amount) {
 		if (amount > _cash) {
 			amount = _cash;
@@ -124,6 +133,7 @@ public class PlayerAssets {
 
 	public void AddLoan(string settlement, int amount, float rate) {
 		_debts.Add(new LoanStructure(settlement, amount, rate));
+		_cash += amount;
 	}
 
 	public int PayLoan(LoanStructure loan, int amount) {
@@ -137,6 +147,10 @@ public class PlayerAssets {
 
 		_cash -= amount;
 		loan.PayBalance(amount);
+
+		if (loan.amount <= 0) {
+			_debts.Remove(loan);
+		}
 
 		return amount;
 	}

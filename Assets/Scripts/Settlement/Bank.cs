@@ -49,7 +49,7 @@ namespace SettlementService {
 		}
 
 		void OnNewDay(int day) {
-			Deposit(Mathf.CeilToInt(GetDeposit() * _depositIntrestRate));
+			GameState.assets.CreditDeposit(gameObject.name, Mathf.CeilToInt(GetDeposit() * _depositIntrestRate));
 		}
 
 		/// <summary>
