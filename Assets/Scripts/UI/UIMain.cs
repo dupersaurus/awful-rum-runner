@@ -84,6 +84,13 @@ namespace UI {
 			GameState.SetGlobalPause(page.name);
 		}
 
+		public static void OpenCargoHold(CargoHold hold) {
+			HoldUI page = _instance.OpenScreen("Hold Screen") as HoldUI;
+			page.Show(hold);
+
+			GameState.SetGlobalPause(page.name);
+		}
+
 		public static void OpenBoardingAction() {
 			BoardingUI page = _instance.OpenScreen("Boarding Action") as BoardingUI;
 			page.Begin();

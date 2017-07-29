@@ -10,7 +10,7 @@ public class CargoHold {
 	/// <summary>
 	/// The total hold size
 	/// </summary>
-	private int _capacity = 700;	
+	private int _capacity = 30;	
 
 	/// <summary>
 	/// The total hold size
@@ -47,7 +47,10 @@ public class CargoHold {
 	}
 
 	public CargoHold() {
-		
+		Add(Cargoes.apples, 1);
+		Add(Cargoes.cider, 1);
+		Add(Cargoes.grain, 1);
+		Add(Cargoes.lumber, 1);
 	}
 
 	public bool Add(Cargoes id, int amount) {
@@ -130,6 +133,16 @@ public class CargoHold {
 		return list;
 	}
 
+	public int GetIllegalCount() {
+		int count = 0;
+
+		foreach (var item in _hold) {
+			count += item.Value;
+		}
+
+		return count;
+	}
+
 	/// <summary>
 	/// Hiding factor is a number representing how well any illegal cargo is hidden
 	/// </summary>
@@ -152,5 +165,19 @@ public class CargoHold {
 		factor = Mathf.RoundToInt((totalHideVolume / totalIllegal) * 50);
 
 		return factor;
+	}
+
+	public int GetHidingCount() {
+		int count = 0;
+
+		foreach (var item in _hold) {
+			var cargo = CargoManager.GetCargo(item.Key);
+
+			if (!cargo.legal) {
+				count += item.Value;
+			}
+		}
+
+		return count;
 	}
 }

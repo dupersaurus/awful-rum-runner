@@ -37,6 +37,12 @@ public class PlayerController : MonoBehaviour, IController {
 			}
 		}
 
+		if (Input.GetButtonDown("Open Hold")) {
+			if (OpenHold()) {
+				return;
+			}
+		}
+
 		// Movement
 		_ship.SetRudder(Input.GetAxis("Horizontal"));
 
@@ -71,6 +77,11 @@ public class PlayerController : MonoBehaviour, IController {
 		}
 
 		return false;
+	}
+
+	private bool OpenHold() {
+		UIMain.OpenCargoHold(GameState.hold);
+		return true;
 	}
 
 	private void UpdateSettlementIcons() {
