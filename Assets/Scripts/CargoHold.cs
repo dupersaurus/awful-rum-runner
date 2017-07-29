@@ -40,19 +40,17 @@ public class CargoHold {
 		get { return _capacity - _currentHold; }
 	}
 
-	private Dictionary<string, int> _hold = new Dictionary<string, int>();
+	private Dictionary<Cargoes, int> _hold = new Dictionary<Cargoes, int>();
 
-	public Dictionary<string, int> manifest {
+	public Dictionary<Cargoes, int> manifest {
 		get { return _hold; }
 	}
 
 	public CargoHold() {
-		Add("grain", 10);
-		Add("sugar", 15);
-		Add("hooch", 2);
+		
 	}
 
-	public bool Add(string id, int amount) {
+	public bool Add(Cargoes id, int amount) {
 		if (_currentHold + amount > _capacity) {
 			return false;
 		}
@@ -67,7 +65,7 @@ public class CargoHold {
 		return true;
 	}
 
-	public void Remove(string id, int amount) {
+	public void Remove(Cargoes id, int amount) {
 		if (_hold.ContainsKey(id)) {
 			_hold[id] -= amount;
 
@@ -88,7 +86,7 @@ public class CargoHold {
 	/// Returns the count of a particular cargo in the hold
 	/// </summary>
 	/// <param name="id">The cargo to count</param>
-	public int GetItemCount(string id) {
+	public int GetItemCount(Cargoes id) {
 		if (_hold.ContainsKey(id)) {
 			return _hold[id];
 		} else {
@@ -118,8 +116,8 @@ public class CargoHold {
 		return true;
 	}
 
-	public Dictionary<string, int> GetIllegalCargo() {
-		var list = new Dictionary<string, int>();
+	public Dictionary<Cargoes, int> GetIllegalCargo() {
+		var list = new Dictionary<Cargoes, int>();
 
 		foreach (var item in _hold) {
 			var cargo = CargoManager.GetCargo(item.Key);

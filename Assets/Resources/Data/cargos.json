@@ -1,11 +1,100 @@
 {
-    "cargos":
-    [
-{"hideRatio":5,"id":"grain","price":1,"legal":true,"description":"Plain old grain","name":"Grain"},{"hideRatio":10,"id":"sugar","price":2,"legal":true,"description":"Natural cane sugar","name":"Sugar"},{"hideRatio":0,"id":"hooch","price":50,"legal":false,"description":"Adulterated, watered-down hooch","name":"Hooch"},        {
-"hideRatio":0,"id":"pure-hooch",            "price": 100,
-            "legal": false,
-            "description": "Pure illicit hooch",
-            "name": "Pure Hooch"
-        }
-    ]
+  "cargos": [
+    {
+      "hideRatio": 6,
+      "id": "grain",
+      "price": 1,
+      "legal": true,
+      "description": "Plain old grain",
+      "name": "Grain"
+    },
+    {
+      "hideRatio": 10,
+      "id": "sugar",
+      "price": 2,
+      "legal": true,
+      "description": "Natural cane sugar",
+      "name": "Sugar"
+    },
+    {
+      "hideRatio": 2,
+      "id": "lumber",
+      "price": 3,
+      "legal": true,
+      "description": "The finest of highland timber",
+      "name": "Lumber"
+    },
+    {
+      "hideRatio": 4,
+      "id": "potato",
+      "price": 2,
+      "legal": true,
+      "description": "Apples of the earth",
+      "name": "Potatoes"
+    },
+    {
+      "hideRatio": 3,
+      "id": "apples",
+      "price": 1,
+      "legal": true,
+      "description": "Apples of the trees",
+      "name": "Apples"
+    },
+    {
+      "hideRatio": 0,
+      "id": "hooch",
+      "price": 25,
+      "legal": false,
+      "description": "Yo ho ho",
+      "name": "Rum"
+    },
+    {
+      "hideRatio": 0,
+      "id": "grog",
+      "price": 10,
+      "legal": false,
+      "description": "Rot gut",
+      "name": "Grog"
+    },
+    {
+      "hideRatio": 0,
+      "id": "tequila",
+      "price": 40,
+      "legal": false,
+      "description": "Worm is optional",
+      "name": "Tequila"
+    },
+    {
+      "hideRatio": 0,
+      "id": "gin",
+      "price": 50,
+      "legal": false,
+      "description": "The finest from His Majesty",
+      "name": "Gin"
+    },
+    {
+      "hideRatio": 0,
+      "id": "scotch",
+      "price": 60,
+      "legal": false,
+      "description": "Ach laddie",
+      "name": "Scotch"
+    },
+    {
+      "hideRatio": 0,
+      "id": "cider",
+      "price": 35,
+      "legal": false,
+      "description": "Cider with a kick",
+      "name": "Hard Cider"
+    },
+    {
+      "hideRatio": 0,
+      "id": "vodka",
+      "price": 25,
+      "legal": false,
+      "description": "Comrade!",
+      "name": "Vodka"
+    }
+  ]
 }

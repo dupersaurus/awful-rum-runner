@@ -113,7 +113,7 @@ namespace UI {
 				index = 0;
 			}
 
-			if (_selectedItem < _itemList.Count) {
+			if (_selectedItem >= 0 && _selectedItem < _itemList.Count) {
 				_itemList[_selectedItem].Deselect();
 			}
 
@@ -212,7 +212,7 @@ namespace UI {
 				
 				_selectedWareNameLabel.text = cargo.name;
 				_sellerHoldLabel.text = item.ware.count.ToString();
-				_playerHoldLabel.text = _ship.GetItemCount(cargo.id).ToString();
+				_playerHoldLabel.text = _ship.GetItemCount(cargo.cargo).ToString();
 			}
 		}
 

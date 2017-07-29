@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SettlementService {
 	[System.Serializable]
 	public class Ware {
-		public string id;
+		public Cargoes id;
 		public float priceMod;
 		public int count;
 	}
@@ -53,7 +53,7 @@ namespace SettlementService {
 		/// </summary>
 		/// <param name="id">The id of the ware</param>
 		/// <param name="amount">The amount to change, positive or negative</param>
-		public void ModifySellingWare(string id, int amount) {
+		public void ModifySellingWare(Cargoes id, int amount) {
 			Ware ware = GetSellWare(id);
 
 			if (ware != null) {
@@ -70,7 +70,7 @@ namespace SettlementService {
 		/// </summary>
 		/// <param name="id">The id of the ware</param>
 		/// <param name="amount">The amount to change, positive or negative</param>
-		public void ModifyBuyingWare(string id, int amount) {
+		public void ModifyBuyingWare(Cargoes id, int amount) {
 			Ware ware = GetBuyWare(id);
 
 			if (ware != null) {
@@ -96,7 +96,7 @@ namespace SettlementService {
 		/// <param name="id">Id of the cargo to sell</param>
 		/// <param name="count">Optional cargo count</param>
 		/// <returns>The selling price</returns>
-		public int GetSellPrice(string id, int count = 1) {
+		public int GetSellPrice(Cargoes id, int count = 1) {
 			Ware ware = GetSellWare(id);
 
 			if (ware == null) {
@@ -114,7 +114,7 @@ namespace SettlementService {
 		/// <param name="id">Id of the cargo to buy</param>
 		/// <param name="count">Optional cargo count</param>
 		/// <returns>The buying price</returns>
-		public int GetBuyPrice(string id, int count = 1) {
+		public int GetBuyPrice(Cargoes id, int count = 1) {
 			Ware ware = GetBuyWare(id);
 
 			if (ware == null) {
@@ -126,7 +126,7 @@ namespace SettlementService {
 			return basePrice * count;
 		}
 
-		public int GetPrice(string id, int count = 1) {
+		public int GetPrice(Cargoes id, int count = 1) {
 			if (GetSellWare(id) != null) {
 				return GetSellPrice(id, count);
 			} else if (GetBuyWare(id) != null) {
@@ -136,7 +136,7 @@ namespace SettlementService {
 			return 0;
 		}
 
-		private Ware GetSellWare(string id) {
+		private Ware GetSellWare(Cargoes id) {
 			foreach (var ware in _sells) {
 				if (ware.id == id) {
 					return ware;
@@ -146,7 +146,7 @@ namespace SettlementService {
 			return null;
 		}
 
-		private Ware GetBuyWare(string id) {
+		private Ware GetBuyWare(Cargoes id) {
 			foreach (var ware in _wants) {
 				if (ware.id == id) {
 					return ware;
@@ -161,7 +161,7 @@ namespace SettlementService {
 		/// </summary>
 		/// <param name="id">The id of the cargo</param>
 		/// <returns>The quatity of cargo at the merchant</returns>
-		public int GetWareQuantity(string id) {
+		public int GetWareQuantity(Cargoes id) {
 			Ware ware = GetSellWare(id);
 
 			if (ware == null) {
@@ -176,7 +176,7 @@ namespace SettlementService {
 		/// </summary>
 		/// <param name="id">The id of the cargo</param>
 		/// <returns>The quatity of cargo to buy</returns>
-		public int GetWantQuantity(string id) {
+		public int GetWantQuantity(Cargoes id) {
 			Ware ware = GetBuyWare(id);
 
 			if (ware == null) {

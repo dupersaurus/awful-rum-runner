@@ -29,7 +29,7 @@ public class LedgerManager {
 	/// <param name="id">The cargo to buy</param>
 	/// <param name="count">The amount to buy</param>
 	/// <returns>Successfulness</returns>
-	public static bool ProcessBuy(CargoHold ship, Warehouse warehouse, PlayerAssets assets, string id, int count) {
+	public static bool ProcessBuy(CargoHold ship, Warehouse warehouse, PlayerAssets assets, Cargoes id, int count) {
 		int price = warehouse.GetSellPrice(id, count);
 
 		if (assets.cash < price) {
@@ -61,7 +61,7 @@ public class LedgerManager {
 	/// <param name="id">The cargo to sell</param>
 	/// <param name="count">The amount to sell</param>
 	/// <returns>Successfulness</returns>
-	public static bool ProcessSell(CargoHold ship, Warehouse warehouse, PlayerAssets assets, string id, int count) {
+	public static bool ProcessSell(CargoHold ship, Warehouse warehouse, PlayerAssets assets, Cargoes id, int count) {
 		int price = warehouse.GetBuyPrice(id, count);
 
 		if (warehouse.cash < price) {

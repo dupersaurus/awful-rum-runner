@@ -6,7 +6,7 @@ public class CargoManager {
 
 	private static CargoManager _instance;
 
-	private Dictionary <string, CargoList.CargoEntry> _cargos = new Dictionary<string, CargoList.CargoEntry>();
+	private Dictionary <Cargoes, CargoList.CargoEntry> _cargos = new Dictionary<Cargoes, CargoList.CargoEntry>();
 
 	public CargoManager() {
 		_instance = this;
@@ -15,11 +15,12 @@ public class CargoManager {
 		CargoList cargos = JsonUtility.FromJson<CargoList>(cargoDef.text);
 
 		foreach (var cargo in cargos.cargos) {
-			_cargos.Add(cargo.id, cargo);
+			_cargos.Add((Cargoes)System.Enum.Parse(typeof(Cargoes), cargo.id), cargo);
+			
 		}
 	}
 
-	public static CargoList.CargoEntry GetCargo(string id) {
+	public static CargoList.CargoEntry GetCargo(Cargoes id) {
 		return _instance._cargos[id];
 	}
 }
@@ -35,7 +36,25 @@ public struct CargoList {
 		public int price;
 		public string id;
 		public int hideRatio;
+		public Cargoes cargo {
+			get { return (Cargoes)System.Enum.Parse(typeof(Cargoes), id); }
+		}
 	}
 
 	public CargoEntry[] cargos;
+}
+
+public enum Cargoes {
+	apples,
+	cider,
+	gin,
+	grain,
+	grog,
+	hooch,
+	lumber,
+	potato,
+	scotch,
+	sugar,
+	tequila,
+	vodka
 }
