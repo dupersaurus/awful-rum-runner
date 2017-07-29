@@ -29785,7 +29785,6 @@ GameObject:
   - component: {fileID: 1214799153}
   - component: {fileID: 1214799152}
   - component: {fileID: 1214799156}
-  - component: {fileID: 1214799157}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -29879,30 +29878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616fc41148ec84c0d869fc8d102a134f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1214799157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1214799151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7358ad5c9984876b05f000f4c9945c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listPanel: {fileID: 0}
-  _settlementName: {fileID: 0}
-  _sellingButton: {fileID: 0}
-  _buyingButton: {fileID: 0}
-  _buyButton: {fileID: 0}
-  _sellButton: {fileID: 0}
-  _playerGoldLabel: {fileID: 0}
-  _sellerGoldLabel: {fileID: 0}
-  _selectedWareNameLabel: {fileID: 0}
-  _playerHoldLabel: {fileID: 0}
-  _sellerHoldLabel: {fileID: 0}
-  _playerCapacityLabel: {fileID: 0}
-  _transactionModeLabel: {fileID: 0}
 --- !u!1 &1219779796
 GameObject:
   m_ObjectHideFlags: 0
@@ -38518,7 +38493,7 @@ MonoBehaviour:
     bounds:
       m_Center: {x: 350, y: 0, z: 210}
       m_Extent: {x: 150, y: 10, z: 85}
-    direction: 135
+    direction: 100
     strength: 20
 --- !u!4 &1610729488
 Transform:
