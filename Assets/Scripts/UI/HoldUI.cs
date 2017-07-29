@@ -48,6 +48,8 @@ namespace UI {
 		}
 
 		private void BuildList() {
+			_items = new List<HoldItem>();
+
 			var manifest = _hold.manifest;
 			int y = 0;
 			Object resource = Resources.Load("UI/Hold Item");
@@ -63,7 +65,14 @@ namespace UI {
 
 				item.SetCargo(cargo.Key, cargo.Value);
 				_items.Add(item);
+
+				item.dumpButton.onClick.AddListener(delegate{ DumpCargo(cargo.Key); });
 			}
+		}
+
+		public void DumpCargo(Cargoes cargo) {
+			_hold.Remove(cargo, 1);
+			UpdateDisplay();
 		}
 	}
 }

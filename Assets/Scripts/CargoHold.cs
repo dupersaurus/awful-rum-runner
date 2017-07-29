@@ -75,6 +75,8 @@ public class CargoHold {
 			if (_hold[id] < 0) {
 				_hold[id] = 0;
 			}
+
+			RecalculateCargoHold();
 		}
 	}
 
@@ -137,7 +139,11 @@ public class CargoHold {
 		int count = 0;
 
 		foreach (var item in _hold) {
-			count += item.Value;
+			var cargo = CargoManager.GetCargo(item.Key);
+
+			if (!cargo.legal) {
+				count += item.Value;
+			}
 		}
 
 		return count;
@@ -173,8 +179,8 @@ public class CargoHold {
 		foreach (var item in _hold) {
 			var cargo = CargoManager.GetCargo(item.Key);
 
-			if (!cargo.legal) {
-				count += item.Value;
+			if (cargo.legal) {
+				count += cargo.hideRatio * item.Value;
 			}
 		}
 
