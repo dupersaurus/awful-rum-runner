@@ -81,6 +81,9 @@ namespace UI {
 		public void ShowSellScreen() {
 			ClearItems();
 
+			_sellingButton.interactable = false;
+			_buyingButton.interactable = true;
+
 			_sellButton.gameObject.SetActive(false);
 			_buyButton.gameObject.SetActive(true);
 
@@ -94,6 +97,9 @@ namespace UI {
 
 		public void ShowBuyScreen() {
 			ClearItems();
+
+			_sellingButton.interactable = true;
+			_buyingButton.interactable = false;
 
 			_sellButton.gameObject.SetActive(true);
 			_buyButton.gameObject.SetActive(false);
