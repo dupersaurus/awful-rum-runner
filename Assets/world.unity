@@ -22513,6 +22513,9 @@ MonoBehaviour:
   - id: 5
     priceMod: 3
     count: 11
+  - id: 6
+    priceMod: 1
+    count: 17
   _cash: 50
 --- !u!65 &958663885
 BoxCollider:
@@ -23485,6 +23488,9 @@ MonoBehaviour:
   - id: 5
     priceMod: 7
     count: 15
+  - id: 0
+    priceMod: 2
+    count: 10
   _cash: 250
 --- !u!114 &987877434
 MonoBehaviour:
@@ -23918,6 +23924,9 @@ MonoBehaviour:
   - id: 11
     priceMod: 3
     count: 10
+  - id: 3
+    priceMod: 2
+    count: 15
   _cash: 400
 --- !u!114 &1015609461
 MonoBehaviour:
@@ -36128,7 +36137,7 @@ MonoBehaviour:
   - id: 3
     priceMod: 6
     count: 17
-  - id: 9
+  - id: 7
     priceMod: 8
     count: 6
   - id: 6
@@ -36141,6 +36150,9 @@ MonoBehaviour:
   - id: 4
     priceMod: 2
     count: 12
+  - id: 9
+    priceMod: 2
+    count: 15
   _cash: 50
 --- !u!114 &1528714619
 MonoBehaviour:
@@ -39172,6 +39184,9 @@ MonoBehaviour:
   - id: 10
     priceMod: 3
     count: 20
+  - id: 6
+    priceMod: 3
+    count: 15
   _cash: 50
 --- !u!114 &1646695781
 MonoBehaviour:
@@ -40240,6 +40255,9 @@ MonoBehaviour:
   - id: 1
     priceMod: 3
     count: 12
+  - id: 3
+    priceMod: 1
+    count: 34
   _cash: 50
 --- !u!114 &1680073745
 MonoBehaviour:
