@@ -9084,7 +9084,7 @@ MonoBehaviour:
   - id: 3
     priceMod: 2
     count: 30
-  _cash: 4300
+  _cash: 6500
 --- !u!114 &411963122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28975,10 +28975,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wants:
   - id: 10
-    priceMod: 13
+    priceMod: 6
     count: 10
   - id: 11
-    priceMod: 8
+    priceMod: 7
     count: 10
   _sells:
   - id: 9
@@ -29212,10 +29212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wants:
   - id: 10
-    priceMod: 12
+    priceMod: 7
     count: 20
   - id: 11
-    priceMod: 14
+    priceMod: 8
     count: 15
   _sells:
   - id: 9
@@ -32516,16 +32516,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wants:
   - id: 10
-    priceMod: 8
+    priceMod: 5
     count: 100
   - id: 5
     priceMod: 6
     count: 100
   - id: 4
-    priceMod: 10
+    priceMod: 4
     count: 100
   _sells: []
-  _cash: 3500
+  _cash: 6000
 --- !u!114 &1330379427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45542,10 +45542,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wants:
   - id: 11
-    priceMod: 10
+    priceMod: 7
     count: 15
   - id: 1
-    priceMod: 12
+    priceMod: 6
     count: 8
   - id: 8
     priceMod: 8
@@ -49576,7 +49576,7 @@ MonoBehaviour:
   _wants:
   - id: 10
     priceMod: 12
-    count: 13
+    count: 9
   _sells:
   - id: 0
     priceMod: 2
