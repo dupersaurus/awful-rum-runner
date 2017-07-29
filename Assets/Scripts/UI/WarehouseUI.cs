@@ -30,6 +30,9 @@ namespace UI {
 		private UnityEngine.UI.Text _sellerGoldLabel;
 
 		[SerializeField]
+		private UnityEngine.UI.Text _reputationLabel;
+
+		[SerializeField]
 		private UnityEngine.UI.Text _selectedWareNameLabel;
 
 		[SerializeField]
@@ -201,6 +204,7 @@ namespace UI {
 		private void UpdateMoneyCount() {
 			_playerGoldLabel.text = GameState.assets.cash.ToString();
 			_sellerGoldLabel.text = _warehouse.cash.ToString();
+			_reputationLabel.text = GameState.assets.reputation.ToString();
 		}
 
 		private void UpdateHoldCount() {

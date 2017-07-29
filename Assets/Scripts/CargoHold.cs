@@ -47,10 +47,9 @@ public class CargoHold {
 	}
 
 	public CargoHold() {
-		Add(Cargoes.apples, 1);
-		Add(Cargoes.cider, 1);
-		Add(Cargoes.grain, 1);
-		Add(Cargoes.lumber, 1);
+		Add(Cargoes.tequila, 1);
+		Add(Cargoes.vodka, 1);
+		Add(Cargoes.lumber, 5);
 	}
 
 	public bool Add(Cargoes id, int amount) {

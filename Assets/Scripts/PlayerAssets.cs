@@ -45,6 +45,11 @@ public class PlayerAssets {
 	private int _cash = 200;
 
 	/// <summary>
+	/// Reputation is earned for selling illicit items
+	/// </summary>
+	private int _reputation = 0;
+
+	/// <summary>
 	/// Cash in each bank in the world
 	/// </summary>
 	private Dictionary<string, int> _bank = new Dictionary<string, int>();
@@ -56,6 +61,10 @@ public class PlayerAssets {
 
 	public int cash {
 		get { return _cash; }
+	}
+
+	public int reputation {
+		get { return _reputation; }
 	}
 
 	public void Initialize(TimeManager time) {
@@ -78,6 +87,14 @@ public class PlayerAssets {
 
 		if (_cash < 0) {
 			_cash = 0;
+		}
+	}
+
+	public void ModifyReputation(int amount) {
+		_reputation += amount;
+
+		if (_reputation < 0) {
+			_reputation = 0;
 		}
 	}
 

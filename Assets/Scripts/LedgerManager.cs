@@ -82,6 +82,10 @@ public class LedgerManager {
 		assets.ModifyCash(price);
 		warehouse.ModifyCash(-price);
 
+		if (!CargoManager.GetCargo(id).legal) {
+			assets.ModifyReputation(price);
+		}
+
 		return true;
 	}
 }

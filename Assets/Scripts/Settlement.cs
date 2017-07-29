@@ -41,6 +41,10 @@ public class Settlement : MonoBehaviour {
 	[SerializeField]
 	private Faction _faction;
 
+	public Faction faction {
+		get { return _faction; }
+	}
+
 	[SerializeField]
 	private Bounds _dockArea;
 

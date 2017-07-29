@@ -185,5 +185,9 @@ namespace SettlementService {
 
 			return ware.count;
 		}
+
+		public bool IsBlockaded() {
+			return GetComponent<Settlement>().faction == Faction.Mainlander;
+		}
 	}
 }
