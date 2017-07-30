@@ -27,8 +27,10 @@ public class BoardingManager {
 
 	private int _fineBaseMultiplier = 5;
 
+	private int _fineMultiplierMod = 0;
+
 	public int fineModifier {
-		get { return _fineBaseMultiplier; }
+		get { return _fineBaseMultiplier - _fineMultiplierMod; }
 	}
 
 	private bool _hasBoardingPassed = false;
@@ -177,15 +179,22 @@ public class BoardingManager {
 	public void ReduceFine(int amt) {
 		int cost = 5000 * amt;
 
-		if (GameState.assets.reputation < cost || amt >= _fineBaseMultiplier) {
+		if (GameState.assets.reputation < cost || amt >= fineModifier) {
 			return;
 		}
 
 		GameState.assets.ModifyReputation(-cost);
-		_fineBaseMultiplier -= amt;
+		_fineMultiplierMod += amt;
+	}
 
-		if (_fineBaseMultiplier < 1) {
-			_fineBaseMultiplier = 1;
+	public void PayFine() {
+		int fine = GetFineCost();
+
+		if (GameState.assets.cash < fine) {
+			GameState.Arrest();
+		} else {
+			GameState.assets.ModifyCash(-fine);
+			EndBoardingAction();
 		}
 	}
 
@@ -214,6 +223,6 @@ public class BoardingManager {
 	}
 
 	public int GetFineCost() {
-		return GetIllegalCargoValue() * _fineBaseMultiplier;
+		return GetIllegalCargoValue() * fineModifier;
 	}
 }

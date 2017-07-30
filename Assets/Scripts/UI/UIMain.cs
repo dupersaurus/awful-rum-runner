@@ -118,6 +118,21 @@ namespace UI {
 			GameState.SetGlobalPause(page.name);
 		}
 
+		public static void OpenArrestedStory() {
+			Page page = _instance.OpenScreen("Endings/Arrested");
+			GameState.SetGlobalPause(page.name);
+		}
+
+		public static void OpenContinueStory() {
+			Page page = _instance.OpenScreen("Endings/Continue");
+			GameState.SetGlobalPause(page.name);
+		}
+
+		public static void OpenGameOverStory() {
+			Page page = _instance.OpenScreen("Endings/Game Over");
+			GameState.SetGlobalPause(page.name);
+		}
+
 		public static WorldSpaceFloater CreateEmptyFloater(Transform target) {
 			return CreateEmptyFloater(target, 0.8f);
 		}

@@ -113,6 +113,10 @@ public class PlayerAssets {
 	/// <param name="amount"></param>
 	/// <returns></returns>
 	protected void SetDeposit(string name, int amount) {
+		if (amount < 0) {
+			amount = 0;
+		}
+
 		if (_bank.ContainsKey(name)) {
 			_bank[name] = amount;
 		} else {

@@ -140,6 +140,30 @@ public class GameState : MonoBehaviour {
 	private void ArrestShip(Ship ship) {
 		_assets.ModifyCash(-_assets.cash);
 		_cargo.ClearContents();
+
+		UI.UIMain.OpenArrestedStory();
+	}
+
+	/// <summary>
+	/// Returns if the game can be continued from some settlement
+	/// </summary>
+	/// <returns>Settlement with funds to continue game</returns>
+	public static Settlement CanContinueGame() {
+		return _instance.FindBankWithDepositAmount(1000);
+	}
+
+	private Settlement FindBankWithDepositAmount(int amount) {
+		for (int i = 0; i < _settlements.Length; i++) {
+			if (assets.GetDeposit(_settlements[i].gameObject.name) >= 1000) {
+				return _settlements[i];
+			}
+		}
+		
+		return null;
+	}
+
+	public static void ContinueGameAtSettlement(Settlement settlement) {
+		assets.CreditDeposit(settlement.gameObject.name, -1000);
 	}
 
 	public static Ship[] GetShipsInRange(Vector3 pos, float range) {

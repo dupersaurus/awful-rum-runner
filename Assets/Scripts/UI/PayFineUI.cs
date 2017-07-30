@@ -98,7 +98,7 @@ namespace UI {
 		}
 
 		public void Resolve() {
-			
+			_boarding.PayFine();
 		}
 	}
 }

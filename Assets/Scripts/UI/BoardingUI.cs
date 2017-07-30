@@ -67,7 +67,7 @@ namespace UI {
 				} else if (odds >= 0.75) {
 					_oddsLabel.text = "Can't get much better than this";
 				} else if (odds >= 0.5) {
-					_oddsLabel.text = "We would be good... right?";
+					_oddsLabel.text = "We should be good... right?";
 				} else if (odds >= 0.25) {
 					_oddsLabel.text = "You don't need to look there...";
 				} else {
