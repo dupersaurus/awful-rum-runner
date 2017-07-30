@@ -66,6 +66,16 @@ public class BoardingState : ChaseState {
 			_boardTime += GetProgressIncrement() * Time.deltaTime;
 			_timeToBoardUI.progress = _boardTime / _requiredBoardTime;
 
+			if (_target.velocity.magnitude <= 0.01f) {
+				float distance = GetHeadingToTarget().magnitude;
+
+				if (distance < 3) {
+					_ship.SetSailState(SailState.Half);
+				} else if (distance < 1.5f) {
+					_ship.SetSailState(SailState.None);
+				}
+			}
+
 			if (_boardTime >= _requiredBoardTime) {
 				BoardingManager.BeginBoardingAction(_ship);
 				_controller.ChangeToState<WaitState>();
@@ -76,6 +86,35 @@ public class BoardingState : ChaseState {
 		}
 
 		return false;
+	}
+
+	protected override Vector3 GetChasePosition() {
+		Vector3 pos = _target.position;
+		Vector3 targetForward = _target.transform.rotation * Vector3.forward;
+		Vector3 diff = _ship.position - pos;
+		float dot = Vector3.Dot(diff.normalized, targetForward);
+
+		// In front of target
+		if (dot >= 0.7f) {
+			pos += targetForward * 1.5f;
+		}
+
+		// To the side or behind
+		else {
+			Vector3 cross = Vector3.Cross(diff.normalized, targetForward);
+
+			// Left
+			if (cross.y >= 0) {
+				pos += Quaternion.AngleAxis(-90, Vector3.up) * targetForward * 1.5f;
+			}
+
+			// Right
+			else {
+				pos += Quaternion.AngleAxis(90, Vector3.up) * targetForward * 1.5f;
+			}
+		}
+
+		return pos;
 	}
 
 	/// <summary>

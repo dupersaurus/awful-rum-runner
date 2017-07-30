@@ -79,7 +79,10 @@ public class BoardingManager {
 	/// Ends the current boarding action
 	/// </summary>
 	public static void EndBoardingAction() {
-		_instance.ResetBoarding();
+		if (_instance != null) {
+			_instance.ResetBoarding();
+		}
+
 		UI.UIMain.CloseScreen();
 	}
 
