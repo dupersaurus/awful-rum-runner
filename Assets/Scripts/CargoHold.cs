@@ -172,22 +172,22 @@ public class CargoHold {
 			}
 		}
 
-		factor = Mathf.RoundToInt((totalHideVolume / totalIllegal) * 50);
+		factor = Mathf.RoundToInt((totalHideVolume / totalIllegal) * 75);
 
 		return factor;
 	}
 
 	public int GetHidingCount() {
-		int count = 0;
+		float count = 0;
 
 		foreach (var item in _hold) {
 			var cargo = CargoManager.GetCargo(item.Key);
 
 			if (cargo.legal) {
-				count += cargo.hideRatio * item.Value;
+				count += item.Value / cargo.hideRatio;
 			}
 		}
 
-		return count;
+		return Mathf.RoundToInt(count);
 	}
 }

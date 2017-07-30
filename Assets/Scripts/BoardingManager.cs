@@ -117,9 +117,11 @@ public class BoardingManager {
 	/// </summary>
 	public bool ResolveBoarding() {
 		float odds = GetInspectionOdds();
-		_hasBoardingPassed = Random.value <= odds;
+		float roll = Random.value;
+		
+		_hasBoardingPassed = roll <= odds;
 
-		_hasBoardingPassed = false;
+		//_hasBoardingPassed = false;
 
 		return _hasBoardingPassed;
 	}
