@@ -24,6 +24,21 @@ namespace UI {
 		[SerializeField]
 		protected Button _closeButton;
 
+		[SerializeField]
+		private Button _escapeButton;
+
+		[SerializeField]
+		private Button _bribeRepButton;
+
+		[SerializeField]
+		private Button _bribeMoneyButton;
+
+		[SerializeField]
+		protected Text _goldLabel;
+
+		[SerializeField]
+		protected Text _reputationLabel;
+
 		protected BoardingManager _manager;
 
 		public virtual void Begin() {
@@ -37,6 +52,8 @@ namespace UI {
 
 			_resolveButton.gameObject.SetActive(true);
 			_closeButton.gameObject.SetActive(false);
+
+			SetupSpecialActions();
 
 			Show();
 		}
@@ -57,6 +74,47 @@ namespace UI {
 					_oddsLabel.text = "Fuck";
 				}
 			}
+		}
+
+		protected virtual void SetupSpecialActions() {
+			int reputation = GameState.assets.reputation;
+			int cash = GameState.assets.cash;
+			int bribe = BoardingManager.GetBribeCost();
+
+			_goldLabel.text = "G " + cash.ToString();
+			_reputationLabel.text = "R " + reputation.ToString();
+
+			_escapeButton.interactable = reputation >= 10000;
+			_bribeRepButton.interactable = reputation >= bribe;
+			_bribeMoneyButton.interactable = cash >= bribe;
+
+			_escapeButton.onClick.AddListener(Escape);
+			_bribeRepButton.onClick.AddListener(BribeReputation);
+			_bribeMoneyButton.onClick.AddListener(BribeCash);
+
+			Text label = FindChildNamed<Text>(_bribeRepButton.gameObject, "Cost");	
+
+			if (label) {
+				label.text = bribe + " R";
+			}
+			
+			label = FindChildNamed<Text>(_bribeMoneyButton.gameObject, "Cost");	
+
+			if (label) {
+				label.text = bribe + " G";
+			}
+		}
+
+		protected T FindChildNamed<T>(GameObject go, string name) where T: MonoBehaviour {
+			var children = go.GetComponentsInChildren<T>();
+
+			for (int i = 0; i < children.Length; i++) {
+				if (children[i].gameObject.name == name) {
+					return children[i];
+				}
+			}
+
+			return null;
 		}
 
 		private void SetFriendBarScale(float scale) {
@@ -92,6 +150,18 @@ namespace UI {
 			} else {
 				UIMain.OpenResolveBoarding();
 			}
+		}
+
+		private void Escape() {
+			_manager.EscapeBoarding();
+		}
+
+		private void BribeCash() {
+			_manager.BribeCash();
+		}
+
+		private void BribeReputation() {
+			_manager.BribeReputation();
 		}
 	}
 }

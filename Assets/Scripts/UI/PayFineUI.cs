@@ -29,6 +29,18 @@ namespace UI {
 		[SerializeField]
 		private GameObject _jailButton;
 
+		[SerializeField]
+		private Button _reduce3xButton;
+
+		[SerializeField]
+		private Button _reduce2xButton;
+
+		[SerializeField]
+		private Button _reduce1xButton;
+
+		[SerializeField]
+		private Text _reputationLabel;
+
 		private bool _canPayFine = false;
 
 		public void Begin(BoardingManager manager) {
@@ -58,6 +70,31 @@ namespace UI {
 				_payButton.SetActive(false);
 				_jailButton.SetActive(true);
 			}
+
+			// Reputation
+			int reputation = GameState.assets.reputation;
+			_reputationLabel.text = "R " + reputation;
+
+			_reduce3xButton.interactable = reputation >= 15000 && _boarding.fineModifier > 3;
+			_reduce2xButton.interactable = reputation >= 10000 && _boarding.fineModifier > 2;
+			_reduce1xButton.interactable = reputation >= 5000 && _boarding.fineModifier > 1;
+		}
+
+		protected T FindChildNamed<T>(GameObject go, string name) where T: MonoBehaviour {
+			var children = go.GetComponentsInChildren<T>();
+
+			for (int i = 0; i < children.Length; i++) {
+				if (children[i].gameObject.name == name) {
+					return children[i];
+				}
+			}
+
+			return null;
+		}
+
+		public void ReduceFine(int amt) {
+			_boarding.ReduceFine(amt);
+			UpdateDisplay();
 		}
 
 		public void Resolve() {

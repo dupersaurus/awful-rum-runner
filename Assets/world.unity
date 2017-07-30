@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 85119929}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!4 &85119934 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298,
@@ -4350,7 +4350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 170447458}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &170447458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15498,7 +15498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 711786916}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &711786916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20630,7 +20630,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894802388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bf979bcaa563471a9c2fbb989c136f9, type: 3}
   m_Name: 
@@ -20644,6 +20644,17 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 205}
   - {x: -10, y: 0, z: 215}
   - {x: 0, y: 0, z: 225}
+--- !u!114 &894802392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894802388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19f9de1cca494735bf3579cb179b701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &895180914
 GameObject:
   m_ObjectHideFlags: 0
@@ -22261,7 +22272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 949681969}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &949681969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28464,7 +28475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 1163685656}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &1163685656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32277,7 +32288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 1313824006}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &1313824006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38771,7 +38782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 1616992021}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &1616992021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43106,7 +43117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 1783749871}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &1783749871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51545,7 +51556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 2079271764}
-  _currentState: {fileID: 85119936}
+  _currentState: {fileID: 0}
 --- !u!114 &2079271764
 MonoBehaviour:
   m_ObjectHideFlags: 0

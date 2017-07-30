@@ -36,6 +36,8 @@ public class AIController : MonoBehaviour, IController {
 	public void Initialize() {
 		_shipUI = UI.UIMain.CreateEmptyFloater(transform);
 		_initialized = true;
+
+		ActivateState(_initialState);
 	}
 
 	public T ChangeToState<T>() where T : AIState {

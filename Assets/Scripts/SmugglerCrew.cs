@@ -10,6 +10,10 @@ public class SmugglerCrew : Crew {
 
 	// Update is called once per frame
 	void Update () {
+		if (GameState.globalPause) {
+			return;
+		}
+
 		Vector3 pos = GetComponent<Ship>().position;
 		float spotSkill = GetSpotDistance();
 

@@ -31,6 +31,11 @@ namespace UI {
 			_sliderStopPoint -= barWidth / 2;
 		}
 
+
+		protected override void SetupSpecialActions() {
+			
+		}
+
 		void Update() {
 			if (!_isSliderSliding) {
 				return;

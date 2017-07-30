@@ -77,6 +77,7 @@ public class BoardingManager {
 	/// Ends the current boarding action
 	/// </summary>
 	public static void EndBoardingAction() {
+		UI.UIMain.CloseScreen();
 		_actor = null;
 		_target = null;
 	}
@@ -126,6 +127,7 @@ public class BoardingManager {
 
 		if (cash >= fine) {
 			GameState.assets.ModifyCash(-fine);
+			EndBoardingAction();
 		} else {
 			GameState.Arrest();
 		}
@@ -135,10 +137,56 @@ public class BoardingManager {
 	/// Cost to bribe
 	/// </summary>
 	/// <returns></returns>
-	public int GetBribeCost() {
+	public static int GetBribeCost() {
 		int baseSkill = (_actor.crew as HunterCrew).bribeSkill;
+		float lerp = Mathf.Lerp(0, 10000, (float)baseSkill / 100f);
+		return Mathf.RoundToInt(lerp);
+	}
 
-		return Mathf.RoundToInt(Mathf.Lerp(0, 10000, baseSkill / 100));
+	public void BribeCash() {
+		int price = GetBribeCost();
+
+		if (price > GameState.assets.cash) {
+			return;
+		}
+
+		GameState.assets.ModifyCash(-price);
+		EndBoardingAction();
+	}
+
+	public void BribeReputation() {
+		int price = GetBribeCost();
+
+		if (price > GameState.assets.reputation) {
+			return;
+		}
+
+		GameState.assets.ModifyReputation(-price);
+		EndBoardingAction();
+	}
+
+	public void EscapeBoarding() {
+		if (GameState.assets.reputation < 10000) {
+			return;
+		}
+
+		GameState.assets.ModifyReputation(-10000);
+		EndBoardingAction();
+	}
+
+	public void ReduceFine(int amt) {
+		int cost = 5000 * amt;
+
+		if (GameState.assets.reputation < cost || amt >= _fineBaseMultiplier) {
+			return;
+		}
+
+		GameState.assets.ModifyReputation(-cost);
+		_fineBaseMultiplier -= amt;
+
+		if (_fineBaseMultiplier < 1) {
+			_fineBaseMultiplier = 1;
+		}
 	}
 
 	public int GetIllegalCargoSize() {

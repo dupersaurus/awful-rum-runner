@@ -27,6 +27,10 @@ namespace UI {
 			OpenScreen("Splash Screen");
 		}
 
+		public static void CloseScreen() {
+			_instance.Close();
+		}
+
 		public void Close() {
 			ClearScreen();
 			OpenHUD();

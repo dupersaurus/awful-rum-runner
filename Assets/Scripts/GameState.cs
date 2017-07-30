@@ -19,6 +19,8 @@ public class GameState : MonoBehaviour {
 
 	private Settlement[] _settlements;
 
+	private bool _hasGameStarted = false;
+
 	public static Settlement[] settlements {
 		get { return _instance._settlements; }
 	}
@@ -30,7 +32,7 @@ public class GameState : MonoBehaviour {
 	}
 
 	public static bool globalPause {
-		get { return _instance._globalPause; }
+		get { return !_instance._hasGameStarted || _instance._globalPause; }
 	}
 
 	// Use this for initialization
@@ -111,6 +113,8 @@ public class GameState : MonoBehaviour {
 		FindObjectOfType<PlayerController>().Initialize();
 
 		assets.Initialize(time);
+		
+		_instance._hasGameStarted = true;
 	}
 
 	public static void SetGlobalPause(string id) {
