@@ -73,7 +73,7 @@ namespace UI {
 		}
 
 		public override void Resolve() {
-			Close();
+			BoardingManager.EndBoardingAction();
 		}
 
 		public void PayFine() {

@@ -18,6 +18,18 @@ public class AIController : MonoBehaviour, IController {
 
 	private Dictionary<string, RectTransform> _upperIcons = new Dictionary<string, RectTransform>();
 
+	private ChaseCooldown _cooldown;
+
+	public bool isOnCooldown {
+		get {
+			if (_cooldown == null) {
+				return false;
+			} else {
+				return _cooldown.IsActive();
+			}
+		}
+	}
+
 	void Awake() {
 		ChangeToState<WaitState>();
 	}
@@ -108,5 +120,14 @@ public class AIController : MonoBehaviour, IController {
 
 			y += height;
 		}
+	}
+
+	public void SetChaseCooldown(float amount) {
+		if (_cooldown == null) {
+			_cooldown = gameObject.AddComponent<ChaseCooldown>();
+		}
+
+		_cooldown.SetCooldown(amount);
+		ChangeToState<PatrolState>();
 	}
 }

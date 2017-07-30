@@ -23,7 +23,7 @@ public class PatrolState : AIState {
 	}
 
 	void Update() {
-		if (Vector3.Distance(GameState.playerShip.position, _ship.position) <= spotDistance) {
+		if (!_controller.isOnCooldown && Vector3.Distance(GameState.playerShip.position, _ship.position) <= spotDistance) {
 			Debug.Log(gameObject.name + " has spotted player");
 			var chase = _controller.ChangeToState<ChaseState>();
 			chase.target = GameState.playerShip;

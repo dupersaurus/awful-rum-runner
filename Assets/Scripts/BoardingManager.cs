@@ -79,6 +79,10 @@ public class BoardingManager {
 	/// Ends the current boarding action
 	/// </summary>
 	public static void EndBoardingAction() {
+		if (_actor) {
+			_actor.GetComponent<AIController>().SetChaseCooldown(60);
+		}
+
 		if (_instance != null) {
 			_instance.ResetBoarding();
 		}
