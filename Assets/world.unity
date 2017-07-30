@@ -9040,6 +9040,7 @@ GameObject:
   - component: {fileID: 411963120}
   - component: {fileID: 411963122}
   - component: {fileID: 411963121}
+  - component: {fileID: 411963123}
   m_Layer: 0
   m_Name: New Lancaster
   m_TagString: Settlement
@@ -9101,7 +9102,22 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -2}
     m_Extent: {x: 5, y: 1, z: 5}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 5, y: -0.8, z: -10}
+--- !u!114 &411963123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 411963119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.025
+  _loanInterestRate: 0.01
+  _loanInterestRateIncrement: 0.01
+  _loanAmount: 4000
 --- !u!1 &418013307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10389,7 +10405,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 3, y: 1, z: 3}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: -4.5, y: -0.8, z: 0}
 --- !u!1 &458731948
 GameObject:
   m_ObjectHideFlags: 0
@@ -22508,7 +22524,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1.5}
     m_Extent: {x: 3, y: 1, z: 2}
-  _respawnOffset: {x: 0, y: 0, z: -5}
+  _respawnOffset: {x: 0, y: -0.8, z: -5}
 --- !u!114 &958663884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23416,6 +23432,7 @@ GameObject:
   - component: {fileID: 987877432}
   - component: {fileID: 987877434}
   - component: {fileID: 987877433}
+  - component: {fileID: 987877435}
   m_Layer: 0
   m_Name: Playa Eterna
   m_TagString: Settlement
@@ -23526,7 +23543,22 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 4, y: 1, z: 6}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 6, y: -0.8, z: -2}
+--- !u!114 &987877435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987877431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.01
+  _loanInterestRate: 0.005
+  _loanInterestRateIncrement: 0.03
+  _loanAmount: 1500
 --- !u!1 &992580148
 GameObject:
   m_ObjectHideFlags: 0
@@ -23893,6 +23925,7 @@ GameObject:
   - component: {fileID: 1015609459}
   - component: {fileID: 1015609461}
   - component: {fileID: 1015609460}
+  - component: {fileID: 1015609462}
   m_Layer: 0
   m_Name: La Mancha
   m_TagString: Settlement
@@ -23963,7 +23996,22 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 5, y: 1, z: 4}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: 6}
+--- !u!114 &1015609462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015609458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.015
+  _loanInterestRate: 0.01
+  _loanInterestRateIncrement: 0.01
+  _loanAmount: 2000
 --- !u!1 &1015848306
 GameObject:
   m_ObjectHideFlags: 0
@@ -24830,6 +24878,7 @@ GameObject:
   - component: {fileID: 1056840151}
   - component: {fileID: 1056840153}
   - component: {fileID: 1056840152}
+  - component: {fileID: 1056840154}
   m_Layer: 0
   m_Name: Jameston
   m_TagString: Settlement
@@ -24934,7 +24983,22 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -0.5}
     m_Extent: {x: 4, y: 1, z: 5}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 9, y: -0.8, z: 0}
+--- !u!114 &1056840154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056840150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.02
+  _loanInterestRate: 0.03
+  _loanInterestRateIncrement: 0.005
+  _loanAmount: 1500
 --- !u!1 &1059356629
 GameObject:
   m_ObjectHideFlags: 0
@@ -29022,7 +29086,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 2}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: -6}
 --- !u!65 &1188585511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29266,7 +29330,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 3}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: -6}
 --- !u!65 &1200238745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32565,7 +32629,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -2}
     m_Extent: {x: 6, y: 1, z: 4}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: -10}
 --- !u!1 &1332491889
 GameObject:
   m_ObjectHideFlags: 0
@@ -35457,7 +35521,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.25, y: 0, z: 0}
     m_Extent: {x: 2.5, y: 1, z: 3}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: -6}
 --- !u!1 &1500183014
 GameObject:
   m_ObjectHideFlags: 1
@@ -36140,6 +36204,7 @@ GameObject:
   - component: {fileID: 1528714620}
   - component: {fileID: 1528714619}
   - component: {fileID: 1528714618}
+  - component: {fileID: 1528714621}
   m_Layer: 0
   m_Name: Nuevo Seville
   m_TagString: Settlement
@@ -36195,7 +36260,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.2, y: 0, z: 0.5}
     m_Extent: {x: 3, y: 1, z: 4}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: -4, y: -0.8, z: 4}
 --- !u!4 &1528714620
 Transform:
   m_ObjectHideFlags: 0
@@ -36254,6 +36319,21 @@ Transform:
   m_Father: {fileID: 1475372888}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528714621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528714617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.02
+  _loanInterestRate: 0.015
+  _loanInterestRateIncrement: 0.015
+  _loanAmount: 1500
 --- !u!1 &1529071931
 GameObject:
   m_ObjectHideFlags: 0
@@ -39230,7 +39310,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.3, y: 0, z: 2}
     m_Extent: {x: 3, y: 1, z: 2}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 0, y: -0.8, z: 5}
 --- !u!1 &1647580755
 GameObject:
   m_ObjectHideFlags: 0
@@ -40183,6 +40263,7 @@ GameObject:
   - component: {fileID: 1680073743}
   - component: {fileID: 1680073745}
   - component: {fileID: 1680073744}
+  - component: {fileID: 1680073746}
   m_Layer: 0
   m_Name: Falstaff
   m_TagString: Settlement
@@ -40302,7 +40383,22 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.2, y: 0, z: 0.5}
     m_Extent: {x: 3, y: 1, z: 4}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: -5, y: -0.8, z: 5}
+--- !u!114 &1680073746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1680073742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c787cac4e9d4ee1999409615158b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _depositIntrestRate: 0.005
+  _loanInterestRate: 0.025
+  _loanInterestRateIncrement: 0.005
+  _loanAmount: 750
 --- !u!1 &1681787277
 GameObject:
   m_ObjectHideFlags: 0
@@ -45599,7 +45695,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 1, y: 0, z: -0.5}
     m_Extent: {x: 4, y: 1, z: 3}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: -4, y: -0.8, z: -8}
 --- !u!1 &1877375066
 GameObject:
   m_ObjectHideFlags: 1
@@ -49630,7 +49726,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 3, y: 0, z: 0}
     m_Extent: {x: 5, y: 1, z: 5}
-  _respawnOffset: {x: 0, y: 0, z: 0}
+  _respawnOffset: {x: 11, y: -0.8, z: 0}
 --- !u!1 &2019219461
 GameObject:
   m_ObjectHideFlags: 1
