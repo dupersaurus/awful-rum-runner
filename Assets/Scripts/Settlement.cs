@@ -48,6 +48,16 @@ public class Settlement : MonoBehaviour {
 	[SerializeField]
 	private Bounds _dockArea;
 
+	/// <summary>
+	/// Local coords from which the ship is placed if respawning in settlement
+	/// </summary>
+	[SerializeField]
+	private Vector3 _respawnOffset;
+
+	public Vector3 respawnPos {
+		get { return transform.position + _respawnOffset; }
+	}
+
 	private Warehouse _warehouse;
 
 	public Warehouse warehouse {
@@ -72,6 +82,11 @@ public class Settlement : MonoBehaviour {
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireCube(transform.position + _dockArea.center, _dockArea.size);
+	}
+
+	void OnDrawGizmosSelected() {
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawWireSphere(respawnPos, 0.2f);
 	}
 
 	public void Initialize() {

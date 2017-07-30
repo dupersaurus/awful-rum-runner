@@ -48,8 +48,10 @@ namespace SettlementService {
 			GameState.time.newDay += OnNewDay;
 		}
 
-		void OnNewDay(int day) {
-			GameState.assets.CreditDeposit(gameObject.name, Mathf.CeilToInt(GetDeposit() * _depositIntrestRate));
+		void OnNewDay(int days) {
+			for (int i = 0; i < days; i++) {
+				GameState.assets.CreditDeposit(gameObject.name, Mathf.CeilToInt(GetDeposit() * _depositIntrestRate));
+			}
 		}
 
 		/// <summary>

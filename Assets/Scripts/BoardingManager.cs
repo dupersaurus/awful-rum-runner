@@ -79,9 +79,14 @@ public class BoardingManager {
 	/// Ends the current boarding action
 	/// </summary>
 	public static void EndBoardingAction() {
+		_instance.ResetBoarding();
 		UI.UIMain.CloseScreen();
+	}
+
+	private void ResetBoarding() {
 		_actor = null;
 		_target = null;
+		_fineMultiplierMod = 0;
 	}
 
 	/// <summary>
@@ -118,21 +123,6 @@ public class BoardingManager {
 
 	public bool hasPassedBoarding {
 		get { return _hasBoardingPassed; }
-	}
-
-	/// <summary>
-	/// Apply the penalty for the boarding
-	/// </summary>
-	public void ApplyBoardingPenalty() {
-		int cash = GameState.assets.cash;
-		int fine = GetFineCost();
-
-		if (cash >= fine) {
-			GameState.assets.ModifyCash(-fine);
-			EndBoardingAction();
-		} else {
-			GameState.Arrest();
-		}
 	}
 
 	/// <summary>
@@ -191,6 +181,7 @@ public class BoardingManager {
 		int fine = GetFineCost();
 
 		if (GameState.assets.cash < fine) {
+			ResetBoarding();
 			GameState.Arrest();
 		} else {
 			GameState.assets.ModifyCash(-fine);

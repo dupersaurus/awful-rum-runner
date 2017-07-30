@@ -56,13 +56,18 @@ public class TimeManager {
 		if (_dayNightController.CallUpdate(delta)) {
 			// New day
 			if (newDay != null) {
-				newDay(_dayNightController.currentDay);
+				newDay(1);
 			}
 		}
 	}
 
 	public void AddDays(int days) {
 		_currentDay += days;
+		_dayNightController.day += days;
+
+		if (days > 0 && newDay != null) {
+			newDay(days);
+		}
 	}
 
 	public void AddHours(int hours) {

@@ -84,6 +84,7 @@ public class CargoHold {
 	/// </summary>
 	public void ClearContents() {
 		_hold.Clear();
+		RecalculateCargoHold();
 	}
 
 	/// <summary>

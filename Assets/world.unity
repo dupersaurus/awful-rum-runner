@@ -9101,6 +9101,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -2}
     m_Extent: {x: 5, y: 1, z: 5}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &418013307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10388,6 +10389,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 3, y: 1, z: 3}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &458731948
 GameObject:
   m_ObjectHideFlags: 0
@@ -20469,7 +20471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.6539793
+      value: -0.3115771
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalRotation.z
@@ -20477,7 +20479,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7565125
+      value: 0.95022094
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_RootOrder
@@ -20585,7 +20587,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4522724585608242, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -81.685005
+      value: -36.309002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e6119257e944b798ce39bb643ee298, type: 2}
@@ -22506,6 +22508,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1.5}
     m_Extent: {x: 3, y: 1, z: 2}
+  _respawnOffset: {x: 0, y: 0, z: -5}
 --- !u!114 &958663884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23523,6 +23526,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 4, y: 1, z: 6}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &992580148
 GameObject:
   m_ObjectHideFlags: 0
@@ -23959,6 +23963,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 5, y: 1, z: 4}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015848306
 GameObject:
   m_ObjectHideFlags: 0
@@ -24929,6 +24934,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -0.5}
     m_Extent: {x: 4, y: 1, z: 5}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1059356629
 GameObject:
   m_ObjectHideFlags: 0
@@ -29016,6 +29022,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 2}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!65 &1188585511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29259,6 +29266,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.5, y: 0, z: -1}
     m_Extent: {x: 3, y: 1, z: 3}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!65 &1200238745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32557,6 +32565,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0, y: 0, z: -2}
     m_Extent: {x: 6, y: 1, z: 4}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1332491889
 GameObject:
   m_ObjectHideFlags: 0
@@ -35448,6 +35457,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 0.25, y: 0, z: 0}
     m_Extent: {x: 2.5, y: 1, z: 3}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1500183014
 GameObject:
   m_ObjectHideFlags: 1
@@ -36185,6 +36195,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.2, y: 0, z: 0.5}
     m_Extent: {x: 3, y: 1, z: 4}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &1528714620
 Transform:
   m_ObjectHideFlags: 0
@@ -39219,6 +39230,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.3, y: 0, z: 2}
     m_Extent: {x: 3, y: 1, z: 2}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1647580755
 GameObject:
   m_ObjectHideFlags: 0
@@ -40290,6 +40302,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: -0.2, y: 0, z: 0.5}
     m_Extent: {x: 3, y: 1, z: 4}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1681787277
 GameObject:
   m_ObjectHideFlags: 0
@@ -45586,6 +45599,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 1, y: 0, z: -0.5}
     m_Extent: {x: 4, y: 1, z: 3}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1877375066
 GameObject:
   m_ObjectHideFlags: 1
@@ -49616,6 +49630,7 @@ MonoBehaviour:
   _dockArea:
     m_Center: {x: 3, y: 0, z: 0}
     m_Extent: {x: 5, y: 1, z: 5}
+  _respawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &2019219461
 GameObject:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ public class DayAndNightControl : MonoBehaviour {
 	public int currentDay = 0; //day 8287... still stuck in this grass prison... no esacape... no freedom...
 
 	public int day {
+		get { return currentDay; }
 		set { currentDay = value; }
 	}
 

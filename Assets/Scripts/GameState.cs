@@ -149,6 +149,8 @@ public class GameState : MonoBehaviour {
 	/// </summary>
 	/// <returns>Settlement with funds to continue game</returns>
 	public static Settlement CanContinueGame() {
+		time.AddDays(100);
+
 		return _instance.FindBankWithDepositAmount(1000);
 	}
 
@@ -163,7 +165,18 @@ public class GameState : MonoBehaviour {
 	}
 
 	public static void ContinueGameAtSettlement(Settlement settlement) {
+		_instance.ContinueGame(settlement);
+	}
+
+	private void ContinueGame(Settlement settlement) {
 		assets.CreditDeposit(settlement.gameObject.name, -1000);
+		_playerShip.transform.position = settlement.respawnPos;
+
+		UI.UIMain.CloseScreen();
+	}
+
+	public static void RestartGame() {
+
 	}
 
 	public static Ship[] GetShipsInRange(Vector3 pos, float range) {

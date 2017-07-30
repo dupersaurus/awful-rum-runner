@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace UI {
 	public class EndingPageUI : Page {
+
+		private static Settlement _respawnSettlement;
 		
 		public void Continue(string page) {
 			switch (page) {
@@ -22,9 +24,9 @@ namespace UI {
 		}
 
 		private void ArrestedNext() {
-			var settlement = GameState.CanContinueGame();
+			_respawnSettlement = GameState.CanContinueGame();
 
-			if (settlement == null) {
+			if (_respawnSettlement == null) {
 				UIMain.OpenGameOverStory();
 			} else {
 				UIMain.OpenContinueStory();
@@ -32,11 +34,14 @@ namespace UI {
 		}
 
 		private void ContinueNext() {
-
+			if (_respawnSettlement) {
+				GameState.ContinueGameAtSettlement(_respawnSettlement);
+				_respawnSettlement = null;
+			}
 		}
 
 		private void GameOverNext() {
-
+			GameState.RestartGame();
 		}
 	}
 }

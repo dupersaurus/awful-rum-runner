@@ -25,8 +25,10 @@ public class LoanStructure {
 		_rate = rate;
 	}
 
-	public void CalculateInterest() {
-		_amount += Mathf.CeilToInt(_amount * _rate);
+	public void CalculateInterest(int days) {
+		for (int i = 0; i < days; i++) {
+			_amount += Mathf.CeilToInt(_amount * _rate);
+		}
 	}
 
 	public void PayBalance(int amount) {
@@ -69,11 +71,14 @@ public class PlayerAssets {
 
 	public void Initialize(TimeManager time) {
 		time.newDay += OnNewDay;
+
+		// DEBUG
+		SetDeposit("Santa Lucita", 1500);
 	}
 
 	void OnNewDay(int day) {
 		for (int i = 0; i < _debts.Count; i++) {
-			_debts[i].CalculateInterest();
+			_debts[i].CalculateInterest(day);
 		}
 	}
 
