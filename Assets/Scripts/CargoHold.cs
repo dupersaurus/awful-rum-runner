@@ -87,6 +87,10 @@ public class CargoHold {
 		RecalculateCargoHold();
 	}
 
+	public void Reset() {
+		ClearContents();
+	}
+
 	/// <summary>
 	/// Returns the count of a particular cargo in the hold
 	/// </summary>

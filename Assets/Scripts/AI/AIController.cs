@@ -40,6 +40,10 @@ public class AIController : MonoBehaviour, IController {
 		ActivateState(_initialState);
 	}
 
+	public void Reset() {
+		ChangeToState<WaitState>();
+	}
+
 	public T ChangeToState<T>() where T : AIState {
 		T state = GetComponent<T>();
 

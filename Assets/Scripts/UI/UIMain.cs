@@ -74,6 +74,10 @@ namespace UI {
 			}
 		}
 
+		public static void Reset() {
+			_instance.OpenScreen("Splash Screen");
+		}
+
 		public static void OpenWarehouse(SettlementService.Warehouse warehouse) {
 			WarehouseUI page = _instance.OpenScreen("Settlement Wares") as WarehouseUI;
 			page.Show(GameState.hold, warehouse, GameState.assets);

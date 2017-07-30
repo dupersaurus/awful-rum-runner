@@ -37,6 +37,8 @@ namespace SettlementService {
 		[SerializeField]
 		private int _loanAmount = 500;
 
+		private int _resetLoanAmount;
+
 		/// <summary>
 		/// The amount the settlement can loan
 		/// </summary>
@@ -44,8 +46,16 @@ namespace SettlementService {
 			get { return _loanAmount; }
 		}
 
+		void Awake() {
+			_resetLoanAmount = _loanAmount;
+		}
+
 		public void Initialize() {
 			GameState.time.newDay += OnNewDay;
+		}
+
+		public void Reset() {
+			_loanAmount = _resetLoanAmount;
 		}
 
 		void OnNewDay(int days) {

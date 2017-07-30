@@ -8,6 +8,10 @@ namespace SettlementService {
 		public Cargoes id;
 		public float priceMod;
 		public int count;
+
+		public Ware Clone() {
+			return new Ware{id = id, priceMod = priceMod, count = count};
+		}
 	}
 
 	public class Warehouse : MonoBehaviour, ISettlementService {
@@ -39,13 +43,49 @@ namespace SettlementService {
 			get { return _cash; }
 		}
 
+		private List<Ware> _resetWants;
+		private List<Ware> _resetSells;
+		private int _resetCash;
+
 		public Settlement settlement {
 			get { return GetComponent<Settlement>(); }
 		}
 
+		void Awake() {
+			_resetCash = _cash;
+			_resetWants = new List<Ware>();
+			_resetSells = new List<Ware>();
+
+			for (int i = 0; i < _wants.Length; i++) {
+				_resetWants.Add(_wants[i].Clone());
+			}
+
+			for (int i = 0; i < _sells.Length; i++) {
+				_resetSells.Add(_sells[i].Clone());
+			}
+		}
+
 		// Use this for initialization
 		public void Initialize() {
+			
+		}
 
+		public void Reset() {
+			_cash = _resetCash;
+
+			var wants = new List<Ware>();
+			var sells = new List<Ware>();
+			
+			for (int i = 0; i < _resetWants.Count; i++) {
+				wants.Add(_resetWants[i].Clone());
+			}
+
+			for (int i = 0; i < _resetSells.Count; i++) {
+				sells.Add(_resetSells[i].Clone());
+			}
+
+			_wants = wants.ToArray();
+			_sells = sells.ToArray();
 		}
 
 		/// <summary>

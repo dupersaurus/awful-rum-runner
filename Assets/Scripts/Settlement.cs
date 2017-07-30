@@ -104,6 +104,14 @@ public class Settlement : MonoBehaviour {
 		}
 	}
 
+	public void Reset() {
+		var services = GetComponents<ISettlementService>();
+
+		for (int i = 0; i < services.Length; i++) {
+			services[i].Reset();
+		}
+	}
+
 	/// <summary>
 	/// Returns whether a ship can dock at the settlement at it's present position
 	/// </summary>

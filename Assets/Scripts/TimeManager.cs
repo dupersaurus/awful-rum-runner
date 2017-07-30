@@ -70,17 +70,14 @@ public class TimeManager {
 		}
 	}
 
-	public void AddHours(int hours) {
-		_currentTime += hours * HOUR;
-	}
-
 	public void SetTime(int day, int hour) {
 		_currentDay = day;
-		_currentTime = hour * HOUR;
+		_dayNightController.day = day;
+		_dayNightController.currentTime = 0.55f;
+		_dayNightController.CallUpdate(0);
 	}
 
-	public void StartDay(int day) {
-		_currentDay = day;
-		_currentTime = 12 * HOUR;
+	public void Reset() {
+		SetTime(1, 12);
 	}
 }

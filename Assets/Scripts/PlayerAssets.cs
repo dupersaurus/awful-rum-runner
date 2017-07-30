@@ -73,7 +73,14 @@ public class PlayerAssets {
 		time.newDay += OnNewDay;
 
 		// DEBUG
-		SetDeposit("Santa Lucita", 1500);
+		//SetDeposit("Santa Lucita", 1500);
+	}
+
+	public void Reset() {
+		_cash = 0;
+		_reputation = 0;
+		_bank = new Dictionary<string, int>();
+		_debts = new List<LoanStructure>();
 	}
 
 	void OnNewDay(int day) {

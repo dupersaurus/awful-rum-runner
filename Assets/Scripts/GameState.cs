@@ -21,6 +21,11 @@ public class GameState : MonoBehaviour {
 
 	private bool _hasGameStarted = false;
 
+	private Vector3 _playerStartPos;
+	private Quaternion _playerStartRot;
+	private Vector3 _cameraStartPos;
+	private Quaternion _cameraStartRot;
+
 	public static Settlement[] settlements {
 		get { return _instance._settlements; }
 	}
@@ -56,6 +61,11 @@ public class GameState : MonoBehaviour {
 		}
 
 		_ais = list.ToArray();
+
+		_playerStartPos = _playerShip.transform.position;
+		_playerStartRot = _playerShip.transform.rotation;
+		_cameraStartPos = Camera.main.transform.position;
+		_cameraStartRot = Camera.main.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -117,6 +127,27 @@ public class GameState : MonoBehaviour {
 		_instance._hasGameStarted = true;
 	}
 
+	public static void RestartGame() {
+		_instance._globalPause = false;
+		_instance._pauseInitiator = null;
+		_instance._hasGameStarted = false;
+
+		_instance.ResetPlayerAndCamera();
+
+		assets.Reset();
+		time.Reset();
+		hold.Reset();
+		UI.UIMain.Reset();
+
+		foreach (var ai in _instance._ais) {
+			ai.GetComponent<AIController>().Reset();
+		}
+
+		foreach (var settlement in _instance._settlements) {
+			settlement.Reset();
+		}
+	}
+
 	public static void SetGlobalPause(string id) {
 		if (_instance._pauseInitiator != null) {
 			return;
@@ -175,8 +206,13 @@ public class GameState : MonoBehaviour {
 		UI.UIMain.CloseScreen();
 	}
 
-	public static void RestartGame() {
+	private void ResetPlayerAndCamera() {
+		_playerShip.transform.position = _playerStartPos;
+		_playerShip.transform.rotation = _playerStartRot;
 
+		Camera.main.transform.position = _cameraStartPos;
+		Camera.main.transform.rotation = _cameraStartRot;
+		Camera.main.GetComponent<FollowCamera>().enabled = false;
 	}
 
 	public static Ship[] GetShipsInRange(Vector3 pos, float range) {
