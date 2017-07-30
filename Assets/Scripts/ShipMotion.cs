@@ -41,10 +41,13 @@ public class ShipMotion : MonoBehaviour {
 		}
 
 		_currentLean = lean;
-		_motionTarget.localRotation = Quaternion.AngleAxis(lean, Vector3.forward);
+		_motionTarget.localRotation = Quaternion.Euler(Mathf.Sin(Time.time + 1) * 2, 0, lean); //Quaternion.AngleAxis(lean, Vector3.forward);
 	}
 
 	float GetDesiredLean() {
-		return (_maxLean * Mathf.Clamp01(_ship.velocity.magnitude / 5)) * _ship.rudder;
+		float turnLean = (_maxLean * Mathf.Clamp01(_ship.velocity.magnitude / 5)) * _ship.rudder;
+		float bobLean = Mathf.Sin(Time.time) * 3;
+
+		return turnLean + bobLean;
 	}
 }
