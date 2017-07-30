@@ -38,6 +38,10 @@ public class Ship : MonoBehaviour {
 	/// </summary>
 	private float _rudder = 0;
 
+	public float rudder {
+		get { return _rudder; }
+	}
+
 	/// <summary>
 	/// Turning rate, deg/sec
 	/// </summary>
@@ -111,7 +115,7 @@ public class Ship : MonoBehaviour {
 
 		// Update ship rotation
 		if (_rudder != 0) {
-			transform.rotation *= Quaternion.AngleAxis(_turnRate * _rudder * delta, Vector3.up);
+			transform.localRotation *= Quaternion.AngleAxis(_turnRate * _rudder * delta, Vector3.up);
 		}
 
 		// Update wind and velocity
@@ -134,7 +138,7 @@ public class Ship : MonoBehaviour {
 		}
 
 		if (currentSpeed > 0) {
-			_velocity = transform.rotation * Vector3.forward * currentSpeed;
+			_velocity = transform.localRotation * Vector3.forward * currentSpeed;
 			transform.position += _velocity * delta;
 
 			IdentifySettlement();

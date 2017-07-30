@@ -47,6 +47,11 @@ public class DayAndNightControl : MonoBehaviour {
 	public bool CallUpdate (float delta) {
 		UpdateLight();
 		CheckTimeOfDay ();
+
+		if (IsNight()) {
+			delta *= 2f;
+		}
+
 		currentTime += (delta / SecondsInAFullDay) * timeMultiplier;
 		if (currentTime >= 1) {
 			currentTime = 0;//once we hit "midnight"; any time after that sunrise will begin.
@@ -118,6 +123,10 @@ public class DayAndNightControl : MonoBehaviour {
 		{
 			DayState = "Night";
 		}
+	}
+
+	bool IsNight() {
+		return DayState == "Midnight" || DayState == "Night";
 	}
 
 	void OnGUI()
