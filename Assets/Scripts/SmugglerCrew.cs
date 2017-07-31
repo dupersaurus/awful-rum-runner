@@ -58,7 +58,6 @@ public class SmugglerCrew : Crew {
 			if (!isSeen) {
 				spotted.Key.GetComponent<AIController>().HideFactionFlag();
 				shipsToRemove.Add(spotted.Key);
-				newSpot = true;
 			}
 		}
 
@@ -70,6 +69,7 @@ public class SmugglerCrew : Crew {
 			if (!_spottedShips.ContainsKey(sir)) {
 				sir.GetComponent<AIController>().ShowFactionFlag();
 				_spottedShips.Add(sir, null);
+				newSpot = true;
 			}
 		}
 
