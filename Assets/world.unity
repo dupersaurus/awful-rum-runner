@@ -3849,6 +3849,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156296785}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &156627112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 156627113}
+  m_Layer: 0
+  m_Name: Shore Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &156627113
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156627112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1717018530}
+  m_Father: {fileID: 1675254821}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &156955660
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +5793,57 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7721775}
   m_Enabled: 1
+--- !u!1001 &241468167
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 58.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 43.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &241468168 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 241468167}
 --- !u!1 &241475976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,6 +6946,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286205889}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &287770130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &287770131 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 287770130}
 --- !u!1 &290424674
 GameObject:
   m_ObjectHideFlags: 0
@@ -7652,7 +7783,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 79a605bf40ccb4a2b891b339049de273, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7788,7 +7919,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -14892,6 +15023,57 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a827bb426f045b94e9c9df2b01ced5de, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &668599928
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 46.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &668599929 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 668599928}
 --- !u!1 &668871817
 GameObject:
   m_ObjectHideFlags: 0
@@ -17492,6 +17674,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766424072}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &767529582
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 73.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 34.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &767529583 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 767529582}
 --- !u!1 &768552581
 GameObject:
   m_ObjectHideFlags: 1
@@ -18768,6 +19001,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 817002015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &819721949
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -11.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &819721950 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 819721949}
 --- !u!1 &823319937
 GameObject:
   m_ObjectHideFlags: 0
@@ -21760,6 +22044,53 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 913084417}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &914526360
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -38.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 16.160002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &914526361 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 914526360}
 --- !u!1 &919432787
 GameObject:
   m_ObjectHideFlags: 0
@@ -24655,6 +24986,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019938333}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1022280340
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 54.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 23.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1022280341 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1022280340}
 --- !u!1 &1024334452
 GameObject:
   m_ObjectHideFlags: 0
@@ -30106,6 +30488,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1205834235}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1206572376
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1206572377 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1206572376}
 --- !u!1 &1206734448
 GameObject:
   m_ObjectHideFlags: 0
@@ -32333,6 +32766,57 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1158844289}
   m_Enabled: 1
+--- !u!1001 &1274079927
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 15.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1274079928 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274079927}
 --- !u!1 &1275932704
 GameObject:
   m_ObjectHideFlags: 0
@@ -35923,6 +36407,57 @@ Transform:
   m_Father: {fileID: 1675254821}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1476301021
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1476301022 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1476301021}
 --- !u!1 &1478003102
 GameObject:
   m_ObjectHideFlags: 0
@@ -39800,6 +40335,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1617835922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1629893749
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 19.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1629893750 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1629893749}
 --- !u!1 &1635632617
 GameObject:
   m_ObjectHideFlags: 0
@@ -41046,6 +41632,7 @@ Transform:
   - {fileID: 1475372888}
   - {fileID: 1042083455}
   - {fileID: 1661099715}
+  - {fileID: 156627113}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42347,6 +42934,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1711246218}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1717018529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1717018530}
+  m_Layer: 0
+  m_Name: Southern Isle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1717018530
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1717018529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.54, y: 11.566185, z: 22.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 914526361}
+  - {fileID: 2053863473}
+  - {fileID: 819721950}
+  - {fileID: 1629893750}
+  - {fileID: 1274079928}
+  - {fileID: 1022280341}
+  - {fileID: 767529583}
+  - {fileID: 241468168}
+  - {fileID: 668599929}
+  - {fileID: 1206572377}
+  - {fileID: 1476301022}
+  - {fileID: 287770131}
+  m_Father: {fileID: 156627113}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1717130255
 GameObject:
   m_ObjectHideFlags: 0
@@ -51577,6 +52204,57 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1530185416}
   m_Enabled: 1
+--- !u!1001 &2053863472
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1717018530}
+    m_Modifications:
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -17.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.566185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.34000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523378375932902, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+      propertyPath: m_Name
+      value: Shore Ambient Audio (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0118308acba2344df8a687632cf8219d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2053863473 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429556225770308, guid: 0118308acba2344df8a687632cf8219d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2053863472}
 --- !u!1 &2055330925
 GameObject:
   m_ObjectHideFlags: 1
