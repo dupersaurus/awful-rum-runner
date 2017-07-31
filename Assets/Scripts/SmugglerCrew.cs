@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SmugglerCrew : Crew {
 
+	[SerializeField]
+	private AudioSource _spotSound;
+
 	private Dictionary<string, UI.WorldSpaceFloater> _spottedSettlements = new Dictionary<string, UI.WorldSpaceFloater>();
 
 	private Dictionary<Ship, UI.WorldSpaceFloater> _spottedShips = new Dictionary<Ship, UI.WorldSpaceFloater>();
@@ -16,6 +19,7 @@ public class SmugglerCrew : Crew {
 
 		Vector3 pos = GetComponent<Ship>().position;
 		float spotSkill = GetSpotDistance();
+		bool newSpot = false;
 
 		// Spot settlements
 		Settlement[] settlements = GameState.settlements;
@@ -26,6 +30,7 @@ public class SmugglerCrew : Crew {
 					//var icon = UI.UIMain.AddFlagIcon(settlement.transform, settlement.flag);
 					settlement.ShowFlag();
 					_spottedSettlements.Add(settlement.name, null);
+					newSpot = true;
 				}
 			} else {
 				if (_spottedSettlements.ContainsKey(settlement.name)) {
@@ -53,6 +58,7 @@ public class SmugglerCrew : Crew {
 			if (!isSeen) {
 				spotted.Key.GetComponent<AIController>().HideFactionFlag();
 				shipsToRemove.Add(spotted.Key);
+				newSpot = true;
 			}
 		}
 
@@ -65,6 +71,10 @@ public class SmugglerCrew : Crew {
 				sir.GetComponent<AIController>().ShowFactionFlag();
 				_spottedShips.Add(sir, null);
 			}
+		}
+
+		if (newSpot && _spotSound != null) {
+			_spotSound.Play();
 		}
 	}
 }
