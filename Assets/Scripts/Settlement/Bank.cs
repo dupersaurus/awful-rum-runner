@@ -85,7 +85,9 @@ namespace SettlementService {
 		/// </summary>
 		/// <param name="amount"></param>
 		public void Deposit(int amount) {
-			GameState.assets.Deposit(gameObject.name, amount);
+			if (GetLoans().Count == 0) {
+				GameState.assets.Deposit(gameObject.name, amount);
+			}
 		}
 
 		/// <summary>

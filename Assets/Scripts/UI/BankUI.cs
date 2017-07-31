@@ -11,9 +11,11 @@ namespace UI {
 		public Text _balanceLabel;
 		public Text _balanceInterestLabel;
 		public InputField _withdrawInput;
+		public Button _withdrawButton;
 
 		public Text _cashLabel;
 		public InputField _depositInput;
+		public Button _depositButton;
 
 		public RectTransform _newLoanPanel;
 		public Text _loanAvailableLabel;
@@ -35,6 +37,10 @@ namespace UI {
 		}
 
 		public void Withdraw() {
+			if (_withdrawInput.text == "") {
+				return;
+			}
+
 			int amt = int.Parse(_withdrawInput.text);
 			_bank.Withdraw(amt);
 
@@ -44,6 +50,10 @@ namespace UI {
 		}	
 
 		public void Deposit() {
+			if (_depositInput.text == "") {
+				return;
+			}
+
 			int amt = int.Parse(_depositInput.text);
 			_bank.Deposit(amt);
 
@@ -55,7 +65,7 @@ namespace UI {
 		public void PayLoan(int id) {
 			var loans = _bank.GetLoans();
 
-			if (id < 0 || id >= loans.Count) {
+			if (id < 0 || id >= loans.Count || _payLoanInput.text == "") {
 				return;
 			}
 
@@ -66,6 +76,10 @@ namespace UI {
 		}
 
 		public void TakeLoan() {
+			if (_newLoanAmountInput.text == "") {
+				return;
+			}
+
 			_bank.TakeLoan(int.Parse(_newLoanAmountInput.text));
 			_newLoanAmountInput.text = "";
 
@@ -81,19 +95,22 @@ namespace UI {
 			_cashLabel.text = _assets.cash.ToString();
 
 			_loanAvailableLabel.text = "up to " + _bank.loanAmount + " G";
-			_newLoanInterestLabel.text = "@ " + (_bank.loanInterestRate * 100) + "%";
+			_newLoanInterestLabel.text = "@ " + (_bank.CalculateLoanRate(1) * 100) + "%";
 
 			var loans = _bank.GetLoans();
 
 			_newLoanPanel.gameObject.SetActive(loans.Count < 3);
 			_payLoanInput.gameObject.SetActive(loans.Count > 0);
-			_loans[0].gameObject.SetActive(loans.Count == 1);
-			_loans[1].gameObject.SetActive(loans.Count == 2);
-			_loans[2].gameObject.SetActive(loans.Count == 3);
+			_loans[0].gameObject.SetActive(loans.Count >= 1);
+			_loans[1].gameObject.SetActive(loans.Count >= 2);
+			_loans[2].gameObject.SetActive(loans.Count >= 3);
 
 			for (int i = 0; i < loans.Count; i++) {
 				_loanLabels[i].text = loans[i].amount + "G @ " + (loans[i].rate * 100) + "%";
 			}
+
+			_withdrawButton.interactable = _withdrawInput.interactable = _bank.GetDeposit() > 0;
+			_depositButton.interactable = _depositInput.interactable = loans.Count == 0 && _assets.cash > 0;
 		}
 	}
 }

@@ -8357,10 +8357,10 @@ MonoBehaviour:
   _windSound: {fileID: 328478981}
   _windVolumeRange:
     min: 0.2
-    max: 1
+    max: 0.7
   _windSpeedRange:
     min: 0
-    max: 10
+    max: 6
 --- !u!65 &328478978
 BoxCollider:
   m_ObjectHideFlags: 0

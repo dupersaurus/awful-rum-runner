@@ -2014,8 +2014,10 @@ MonoBehaviour:
   _balanceLabel: {fileID: 114355982826749494}
   _balanceInterestLabel: {fileID: 114562730031835630}
   _withdrawInput: {fileID: 114213396765309878}
+  _withdrawButton: {fileID: 114613964221834878}
   _cashLabel: {fileID: 114551266487236534}
   _depositInput: {fileID: 114467258041164982}
+  _depositButton: {fileID: 114700532282612214}
   _newLoanPanel: {fileID: 224410717755769032}
   _loanAvailableLabel: {fileID: 114671419009589632}
   _newLoanInterestLabel: {fileID: 114999668812844288}
