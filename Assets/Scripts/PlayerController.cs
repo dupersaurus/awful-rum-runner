@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour, IController {
 
 		UpdateSettlementIcons();
 
+		if (Input.GetButtonDown("Open Map")) {
+			UI.UIMain.OpenMap();
+			return;
+		} 
+
 		// Settlement interaction
 		if (Input.GetButtonDown("Open Warehouse")) {
 			if (OpenWarehouse()) {

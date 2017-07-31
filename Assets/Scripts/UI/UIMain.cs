@@ -122,6 +122,11 @@ namespace UI {
 			GameState.SetGlobalPause(page.name);
 		}
 
+		public static void OpenMap() {
+			Page page = _instance.OpenScreen("Map Screen");
+			GameState.SetGlobalPause(page.name);
+		}
+
 		public static void OpenArrestedStory() {
 			Page page = _instance.OpenScreen("Endings/Arrested");
 			GameState.SetGlobalPause(page.name);
