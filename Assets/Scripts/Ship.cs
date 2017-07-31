@@ -38,6 +38,9 @@ public class Ship : MonoBehaviour {
 	/// </summary>
 	private float _rudder = 0;
 
+	[SerializeField]
+	private ParticleSystem _wake;
+
 	public float rudder {
 		get { return _rudder; }
 	}
@@ -101,6 +104,10 @@ public class Ship : MonoBehaviour {
 		_controller = GetComponent<IController>();
 		_sails = GetComponent<SailModel>();
 		SetSailState(SailState.None);
+
+		if (_wake != null) {
+			_wake.gameObject.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -142,6 +149,10 @@ public class Ship : MonoBehaviour {
 			transform.position += _velocity * delta;
 
 			IdentifySettlement();
+		}
+
+		if (_wake != null) {
+			_wake.gameObject.SetActive(velocity.sqrMagnitude > 0.1f);
 		}
 	}
 
